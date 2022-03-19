@@ -1,10 +1,51 @@
-header {
-  background: lightblue;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+header > .container {
+  text-align: center;
+}
+
+header > .container .logo > a img {
+  width: 10em;
+  height: 2em;
+  margin: 0.8em auto 0.5em;
+}
+
+header > .container .location__paris {
+  padding: 10px;
+  margin-top: 0.2em;
+}
+
+header > .container .book__menu {
+  line-height: 4;
+  background: whitesmoke;
+  padding: 30px 0 40px;
+}
+
+main {
+  margin-top: 2em;
+}
+
+img {
+  width: 24em;
+  height: 18em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'roboto';
+}
+
+header .logo {
+  -webkit-box-shadow: 0 2px 3px 0 #b4b4b4;
+          box-shadow: 0 2px 3px 0 #b4b4b4;
+}
+
+header .location__paris {
+  background: #eeeded;
 }
 /*# sourceMappingURL=style.css.map */
