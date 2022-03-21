@@ -5,6 +5,7 @@ h1, h2, h3{
 header{
     & > .container{
             text-align: center;
+            margin-bottom: 2em;
             .logo{
                 & > a img {
                     width: 10em;
@@ -18,8 +19,22 @@ header{
             }
             .book__menu{
                 line-height: 4;
-                padding: 30px 0 40px;
+                padding: 30px 0px 40px 0px;
             }
+    }
+    & h1{
+        margin-left: 20px;
+        font-size: 22px;
+    }
+    & > nav{
+        margin: 1.5em 0 1em;
+        line-height: 3;
+        p{
+            width: 20em;
+            margin: 14px 20px;
+            border-radius: 20px 20px;
+            box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
+        }
     }
 } 
 main{
