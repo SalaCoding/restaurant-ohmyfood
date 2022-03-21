@@ -43,6 +43,21 @@ header > nav p {
 
 main {
   margin-top: 2em;
+  padding: 2em 0 0 2em;
+}
+
+footer {
+  padding-left: 20px;
+}
+
+footer > h2 {
+  line-height: 2;
+  font-size: 18px;
+}
+
+footer ul > li {
+  line-height: 1.5;
+  font-size: 14px;
 }
 
 main img {
@@ -68,7 +83,7 @@ header .location__paris {
 }
 
 header .book__menu {
-  background: #f0eeee;
+  background: #f7f4f4;
 }
 
 header > nav {
@@ -78,5 +93,18 @@ header > nav {
 
 header > nav p {
   background: whitesmoke;
+}
+
+main {
+  background: whitesmoke;
+}
+
+footer {
+  background: #464646;
+  color: #fff;
+}
+
+footer h2 {
+  font-family: "shrikhand";
 }
 /*# sourceMappingURL=style.css.map */
