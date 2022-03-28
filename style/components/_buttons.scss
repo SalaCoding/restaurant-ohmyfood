@@ -1,4 +1,7 @@
-button{
-    font-weight: bold;
-    background: red;
+.book__menu{
+    & > .btn{
+        background: red;
+        padding: 10em;
+        border: 1px solid #000;
+    }
 }
