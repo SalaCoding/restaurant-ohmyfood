@@ -16,6 +16,7 @@ header > .container .logo > a img {
 header > .container .location__paris {
   padding: 10px;
   margin-top: 0.2em;
+  font-weight: bold;
 }
 
 header > .container .book__menu {
@@ -44,6 +45,29 @@ header > nav p {
 main {
   margin-top: 2em;
   padding: 2em 0 0 2em;
+}
+
+main > h1 {
+  margin-bottom: 20px;
+}
+
+main > .img__container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 20px;
+  border-radius: 2px 0px 18px 18px;
+}
+
+main > .img__container .new__resto {
+  position: absolute;
+  left: 19.5em;
+  margin-top: 10px;
+  background: #75f7cb;
+  color: #018357;
+  padding: 6px 10px;
+  width: 70px;
+  text-align: center;
 }
 
 footer {
@@ -97,6 +121,12 @@ header > nav p {
 
 main {
   background: whitesmoke;
+}
+
+main > .img__container {
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 2px 2px #f0efef;
+          box-shadow: 0px 3px 2px 2px #f0efef;
 }
 
 footer {
