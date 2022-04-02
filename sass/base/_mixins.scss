@@ -1,0 +1,11 @@
+@mixin style($background){
+    background: $background;
+    font-family: $fontfamily;
+}
+@mixin imgcontainer() {
+    //box-shadow: 0px 3px 2px 2px $imgcontain;
+}
+@mixin image() {
+    width: 24em;
+    height: 18em;
+}
