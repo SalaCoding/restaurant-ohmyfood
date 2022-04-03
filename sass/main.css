@@ -32,6 +32,23 @@ header > .container .book__menu {
   background: #f7f4f4;
 }
 
+header > .container .book__menu > p {
+  margin: 0 14em;
+  line-height: 1.2;
+  color: #6b6b6b;
+}
+
+header > .container .book__menu > button {
+  margin-top: 20px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  background-image: linear-gradient(350deg, #612e9e, #fa4fe6);
+  border-radius: 44px;
+  color: #fff;
+  font-size: 14px;
+}
+
 header h1 {
   margin-left: 20px;
   font-size: 22px;

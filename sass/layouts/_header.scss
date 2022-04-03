@@ -24,6 +24,21 @@ header{
                 padding: 30px 0px 40px 0px;
                 //$background: $bookmenu;
                 background: rgb(247, 244, 244);
+                & > p{
+                    margin: 0 14em;
+                    line-height: 1.2;
+                    color: #6b6b6b;
+                }
+                & > button{
+                    margin-top: 20px;
+                    border: none;
+                    width: 200px;
+                    height: 50px;
+                    background-image: linear-gradient(350deg, #612e9e, rgb(250, 79, 230));
+                    border-radius: 44px;
+                    color: #fff;
+                    font-size: 14px;
+                }
             }
     }
     & h1{
