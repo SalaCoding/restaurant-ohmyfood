@@ -4,12 +4,11 @@ header{
             text-align: center;
             margin-bottom: 2em;
             .logo{
+                box-shadow: 0 2px 3px 0 #b4b4b4;
                 & > a img {
-                    border: 1px solid;
                     width: 10em;
                     height: 2em;
                     margin: 0.8em auto 0.5em;
-                    box-shadow: 0 2px 3px 0 #b4b4b4;
                 }
             }
             .location__paris{
