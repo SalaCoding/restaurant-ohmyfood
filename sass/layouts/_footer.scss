@@ -1,14 +1,16 @@
-//footer{
-//    padding-left: 20px;
-//    //$background: $footcolor;
-//    //color: $textcolor;
-//    & > h2{
-//        line-height: 2;
-//        font-size: 18px;
-//        //font-family: $font__logo;
-//    }
-//    ul > li{
-//        line-height: 1.5;
-//        font-size: 14px;
-//    }
-//}
+footer{
+    padding-left: 20px;
+    //$background: $footcolor;
+    background: rgb(70, 70, 70);
+    color: #fff;
+    //color: $textcolor;
+    & > h2{
+        line-height: 2;
+        font-size: 18px;
+        //font-family: $font__logo;
+    }
+    ul > li{
+        line-height: 1.5;
+        font-size: 14px;
+    }
+}

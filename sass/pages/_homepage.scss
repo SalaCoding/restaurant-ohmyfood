@@ -1,8 +1,9 @@
 main{
     //@include style($background);
-    margin-top: 2em;
+    margin-top: 14em;
     padding: 2em 0 0 2em;
     //$background: $navcolor;
+    background: rgb(245, 245, 245);
     & > h1{
         margin-bottom: 20px;
     }
@@ -10,6 +11,7 @@ main{
         width: fit-content;
         margin-bottom: 20px;
         border-radius: 2px 0px 18px 18px;
+        box-shadow: 0px 3px 2px 2px #f0efef;
         //$background: $textcolor;
         //@include imgcontainer;
         .new__resto{
@@ -23,7 +25,7 @@ main{
             text-align: center;
         }
         a img{
-            @include image;
+            @include image();
         }
     }
 
