@@ -1,6 +1,6 @@
 header{
     //@include style($bookmenu);
-    font-family: 'roboto';
+    font-family: 'roboto'; 
    & > .container{
             text-align: center;
             margin-bottom: 2em;
@@ -10,6 +10,7 @@ header{
                     width: 10em;
                     height: 2em;
                     margin: 0.8em auto 0.5em;
+                    cursor: default;
                 }
             }
             & a{
@@ -50,12 +51,14 @@ header{
             }
     }
     & h1{
-        margin: 0 20px 10px;
+        margin: 0 240px 10px;
         font-size: 22px;
         font-weight: bold;
     }
     & > nav{
-        margin: 0em 0.7em;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0em 14em;
         line-height: 3;
         font-weight: bold;
         position: absolute;
@@ -75,91 +78,44 @@ header{
         }
         .fa{
             margin-right: 20px;
+        }
+        .circle__container{
+            display: flex;
+            position: absolute;
+            top: 30px;
+            .circle__one{
+                top: 32px;
+                margin-left: 10px;
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
+                background: #9356DC;
+                color: #fff;
+            }
+            .circle__two{
+                top: 107px;
+                margin-left: 20.4em;
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
+                background: #9356DC;
+                color: #fff;
+            }
+            .circle__three{
+                top: 179px;
+                margin-left: 20.5em;
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
+                background: #9356DC;
+                color: #fff;
+            }
+            .number{
+                margin-left: 7px;
+                margin-top: -12px;
+                font-weight: normal;
+            }
         }       
-        .circle__one{
-            position: absolute;
-            top: 32px;
-            margin-left: 10px;
-            width: 23px;
-            height: 23px;
-            border-radius: 50%;
-            background: #9356DC;
-            color: #fff;
-        }
-        .circle__two{
-            position: absolute;
-            top: 107px;
-            margin-left: 10px;
-            width: 23px;
-            height: 23px;
-            border-radius: 50%;
-            background: #9356DC;
-            color: #fff;
-        }
-        .circle__three{
-            position: absolute;
-            top: 179px;
-            margin-left: 10px;
-            width: 23px;
-            height: 23px;
-            border-radius: 50%;
-            background: #9356DC;
-            color: #fff;
-        }
-        .number{
-            position: absolute;
-            left: 7px;
-            bottom: -12px;
-            font-weight: normal;
-        }
-//        .anim1{
-//            position: relative;
-//            animation-name: dropUp;
-//            animation-duration: 3s;
-//            animation-delay: 1s;
-//            animation-timing-function: linear;
-//            animation-direction: reverse;
-//        }
-//        .anim2{
-//            position: relative;
-//            animation-name: dropUpmid;
-//            animation-duration: 4s;
-//            animation-delay: 2s;
-//            animation-timing-function: linear;
-//            animation-direction: reverse;
-//        }
-//        .anim3{
-//            position: relative;
-//            animation-name: dropdown;
-//            animation-duration: 3s;
-//            animation-delay: 3s;
-//            animation-timing-function: linear;
-//            animation-direction: reverse;
-//        }
-//        @keyframes dropUp{
-//            from{
-//                margin-top: 10px;
-//            }
-//            to { 
-//                margin-bottom: 5px;
-//            }
-//        }
-//        @keyframes dropUpmid{
-//            from{
-//                margin-top: 10px;
-//            }
-//            to { 
-//                margin-bottom: 5px;
-//            }
-//        }
-//        @keyframes fadeInOpa{
-//            0% {
-//                opacity: 0;
-//            }
-//            100% {
-//                opacity: 1;
-//            }
-//        }
         .anim__fa:hover{
             background: #faf1fe;
         }

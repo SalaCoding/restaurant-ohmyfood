@@ -1,17 +1,25 @@
 footer{
-    padding-left: 20px;
-    //$background: $footcolor;
+    padding: 20px;
     background: rgb(70, 70, 70);
     color: #fff;
     //color: $textcolor;
+    //$background: $footcolor;
+    
     & > h2{
         line-height: 2;
-        font-size: 18px;
-        font-family: "shrikland";
+        font-size: 24px;
+        font-family: "shrikhand";
+        text-align: center;
         //font-family: $font__logo;
     }
-    ul > li{
-        line-height: 1.5;
-        font-size: 14px;
+    & > ul{
+        display: flex;
+        justify-content: space-evenly;
+        a li{
+            color: #fff;            
+            text-decoration: none;
+            line-height: 1.5;
+            font-size: 16px;
+        }
     }
 }

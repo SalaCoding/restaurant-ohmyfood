@@ -16,6 +16,7 @@ header > .container .logo > a img {
   width: 10em;
   height: 2em;
   margin: 0.8em auto 0.5em;
+  cursor: default;
 }
 
 header > .container a {
@@ -60,13 +61,18 @@ header > .container .book__menu button:hover {
 }
 
 header h1 {
-  margin: 0 20px 10px;
+  margin: 0 240px 10px;
   font-size: 22px;
   font-weight: bold;
 }
 
 header > nav {
-  margin: 0em 0.7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0em 14em;
   line-height: 3;
   font-weight: bold;
   position: absolute;
@@ -87,8 +93,15 @@ header > nav .fa {
   margin-right: 20px;
 }
 
-header > nav .circle__one {
+header > nav .circle__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
+  top: 30px;
+}
+
+header > nav .circle__container .circle__one {
   top: 32px;
   margin-left: 10px;
   width: 23px;
@@ -98,10 +111,9 @@ header > nav .circle__one {
   color: #fff;
 }
 
-header > nav .circle__two {
-  position: absolute;
+header > nav .circle__container .circle__two {
   top: 107px;
-  margin-left: 10px;
+  margin-left: 20.4em;
   width: 23px;
   height: 23px;
   border-radius: 50%;
@@ -109,10 +121,9 @@ header > nav .circle__two {
   color: #fff;
 }
 
-header > nav .circle__three {
-  position: absolute;
+header > nav .circle__container .circle__three {
   top: 179px;
-  margin-left: 10px;
+  margin-left: 20.5em;
   width: 23px;
   height: 23px;
   border-radius: 50%;
@@ -120,10 +131,9 @@ header > nav .circle__three {
   color: #fff;
 }
 
-header > nav .number {
-  position: absolute;
-  left: 7px;
-  bottom: -12px;
+header > nav .circle__container .number {
+  margin-left: 7px;
+  margin-top: -12px;
   font-weight: normal;
 }
 
@@ -132,48 +142,80 @@ header > nav .anim__fa:hover {
 }
 
 footer {
-  padding-left: 20px;
+  padding: 20px;
   background: #464646;
   color: #fff;
 }
 
 footer > h2 {
   line-height: 2;
-  font-size: 18px;
-  font-family: "shrikland";
+  font-size: 24px;
+  font-family: "shrikhand";
+  text-align: center;
 }
 
-footer ul > li {
+footer > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer > ul a li {
+  color: #fff;
+  text-decoration: none;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 main {
   font-family: 'roboto';
-  margin-top: 16em;
-  padding: 2em 0 0 2em;
+  margin-top: 8em;
+  padding-bottom: 40px;
   background: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main > h1 {
-  margin-bottom: 20px;
   font-weight: bold;
   font-size: 24px;
+  position: absolute;
+  top: 23.5em;
+  left: 10em;
 }
 
-main > .img__container {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-bottom: 20px;
-  border-radius: 2px 0px 18px 18px;
+main > .home__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 68em;
+}
+
+main > .home__images > .img__container {
+  margin-top: 70px;
+  border-radius: 18px 18px 18px 18px;
   -webkit-box-shadow: 0px 1.5px 1px 1px #b4b3b3;
           box-shadow: 0px 1.5px 1px 1px #b4b3b3;
 }
 
-main > .img__container .new__resto {
+main > .home__images > .img__container .new__resto {
   position: absolute;
-  left: 19.5em;
+  left: 36em;
   margin-top: 10px;
   background: #75f7cb;
   color: #018357;
@@ -182,8 +224,54 @@ main > .img__container .new__resto {
   text-align: center;
 }
 
-main > .img__container a img {
+main > .home__images > .img__container .new__resto2 {
+  position: absolute;
+  left: 66.5em;
+  margin-top: 10px;
+  background: #75f7cb;
+  color: #018357;
+  padding: 6px 10px;
+  width: 70px;
+  text-align: center;
+}
+
+main > .home__images > .img__container div {
+  margin: 0 10px 14px;
+}
+
+main > .home__images > .img__container div h3 {
+  line-height: 2;
+  font-weight: bold;
+}
+
+main > .home__images > .img__container .font__aw {
+  position: absolute;
+  left: 41em;
+  margin-top: -43px;
+  color: #787878;
+}
+
+main > .home__images > .img__container .font__aw .far:hover {
+  color: #9356DC;
+  border-radius: 18px 18px 30px 30px;
+  height: 11px;
+  margin-top: 8px;
+}
+
+main > .home__images > .img__container .font__aw2 {
+  position: absolute;
+  left: 71.5em;
+  margin-top: -43px;
+  color: #787878;
+}
+
+main > .home__images > .img__container .font__aw2 .far:hover {
+  background-color: red;
+}
+
+main > .home__images > .img__container a img {
   width: 24em;
   height: 18em;
+  border-radius: 18px 18px 0px 0px;
 }
 /*# sourceMappingURL=main.css.map */

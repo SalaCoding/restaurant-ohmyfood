@@ -1,0 +1,71 @@
+.img__menu{
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    margin-top: 100px;
+    & > img{
+        position: absolute;
+        width: 396px;
+        margin-top: 100px;
+     }
+}
+.container__page{
+   background: red;//rgb(245, 245, 245);
+   position: relative;
+   width: 358px;
+   top: -56px;
+   border-radius: 40px 40px 0 0;
+   padding: 20px;
+   line-height: 2;
+
+//        .anim1{
+//            position: relative;
+//            animation-name: dropUp;
+//            animation-duration: 3s;
+//            animation-delay: 1s;
+//            animation-timing-function: linear;
+//            animation-direction: reverse;
+//        }
+//        .anim2{
+//            position: relative;
+//            animation-name: dropUpmid;
+//            animation-duration: 4s;
+//            animation-delay: 2s;
+//            animation-timing-function: linear;
+//            animation-direction: reverse;
+//        }
+//        .anim3{
+//            position: relative;
+//            animation-name: dropdown;
+//            animation-duration: 3s;
+//            animation-delay: 3s;
+//            animation-timing-function: linear;
+//            animation-direction: reverse;
+//        }
+//        @keyframes dropUp{
+//            from{
+//                margin-top: 10px;
+//            }
+//            to { 
+//                margin-bottom: 5px;
+//            }
+//        }
+//        @keyframes dropUpmid{
+//            from{
+//                margin-top: 10px;
+//            }
+//            to { 
+//                margin-bottom: 5px;
+//            }
+//        }
+//        @keyframes fadeInOpa{
+//            0% {
+//                opacity: 0;
+//            }
+//            100% {
+//                opacity: 1;
+//            }
+//        }
+}
+h2{
+   line-height: 2;
+}

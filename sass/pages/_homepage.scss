@@ -1,34 +1,104 @@
 main{
     font-family: 'roboto';
     //@include style($background);
-    margin-top: 16em;
-    padding: 2em 0 0 2em;
+    margin-top: 8em;
+    padding-bottom: 40px;
     //$background: $navcolor;
     background: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     & > h1{
-        margin-bottom: 20px;
         font-weight: bold;
         font-size: 24px;
+        position: absolute;
+        top: 23.5em;
+        left: 10em;
     }
-    & > .img__container{
-        width: fit-content;
-        margin-bottom: 20px;
-        border-radius: 2px 0px 18px 18px;
-        box-shadow: 0px 1.5px 1px 1px #b4b3b3;
-        //$background: $textcolor;
-        //@include imgcontainer;
-        .new__resto{
-           position: absolute;
-            left: 19.5em;
-            margin-top: 10px;
-            background: rgb(117, 247, 203);
-            color: rgb(1, 131, 87);
-            padding: 6px 10px;
-            width: 70px;
-            text-align: center;
-        }
-        a img{
-            @include image();
+    & > .home__images{
+        display: flex;
+        flex-wrap: wrap;        
+        justify-content: space-evenly;
+        width: 68em;
+        & > .img__container{
+            margin-top: 70px;
+            border-radius: 18px 18px 18px 18px;
+            box-shadow: 0px 1.5px 1px 1px #b4b3b3;
+            //$background: $textcolor;
+            //@include imgcontainer;
+            .new__resto{
+               position: absolute;
+                left: 36em;
+                margin-top: 10px;
+                background: rgb(117, 247, 203);
+                color: rgb(1, 131, 87);
+                padding: 6px 10px;
+                width: 70px;
+                text-align: center;
+            }
+            .new__resto2{
+                position: absolute;
+                 left: 66.5em;
+                 margin-top: 10px;
+                 background: rgb(117, 247, 203);
+                 color: rgb(1, 131, 87);
+                 padding: 6px 10px;
+                 width: 70px;
+                 text-align: center;
+             }
+        //    .new__resto3{
+        //        position: absolute;
+        //         left: 36em;
+        //         margin-top: 10px;
+        //         background: rgb(117, 247, 203);
+        //         color: rgb(1, 131, 87);
+        //         padding: 6px 10px;
+        //         width: 70px;
+        //         text-align: center;
+        //     }
+        //     .new__resto4{
+        //        position: absolute;
+        //         left: 36em;
+        //         margin-top: 10px;
+        //         background: rgb(117, 247, 203);
+        //         color: rgb(1, 131, 87);
+        //         padding: 6px 10px;
+        //         width: 70px;
+        //         text-align: center;
+        //     }
+            & div{
+                margin: 0 10px 14px; 
+                & h3{
+                    
+                line-height: 2;
+                font-weight: bold;
+                }
+            }
+            & .font__aw{
+                position: absolute;
+                left: 41em;
+                margin-top: -43px;
+                color: rgb(120, 120, 120);
+                .far:hover{
+                    color: #9356DC;
+                    border-radius: 18px 18px 30px 30px;
+                    height: 11px;
+                    margin-top: 8px;
+                }
+            }
+            & .font__aw2{
+                position: absolute;
+                left: 71.5em;
+                margin-top: -43px;
+                color: rgb(120, 120, 120);
+                .far:hover{
+                    background-color: red; //#9356DC; 
+                }
+            }
+            a img{
+                @include image();
+                border-radius: 18px 18px 0px 0px;
+            }
         }
     }
 
