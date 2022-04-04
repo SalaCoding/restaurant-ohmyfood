@@ -12,12 +12,16 @@ header{
                     margin: 0.8em auto 0.5em;
                 }
             }
-            .location__paris{
-                padding: 10px;
-                margin-top: 0.2em;
-                font-weight: bold;
-                background: #e9e9e9;
-                color: #2c2b2b;
+            & a{
+                
+                text-decoration: none;
+                .location__paris{
+                    padding: 10px;
+                    margin-top: 0.2em;
+                    font-weight: bold;
+                    background: #e9e9e9;
+                    color: #3b3b3b;
+                }
             }
             .book__menu{ 
                 line-height: 4;
@@ -38,73 +42,124 @@ header{
                     border-radius: 44px;
                     color: #fff;
                     font-size: 14px;
+                    cursor: pointer;
+                }
+                button:hover{
+                    box-shadow: 0px 0px 2px 2px #fb79f5;
                 }
             }
     }
     & h1{
-        margin-left: 20px;
+        margin: 0 20px 10px;
         font-size: 22px;
         font-weight: bold;
     }
     & > nav{
-        margin: 1.5em 0 1em;
+        margin: 0em 0.7em;
         line-height: 3;
-        margin: 0;
+        font-weight: bold;
         position: absolute;
-        opacity: 100;
-        animation-name: fadeInOpa;
-        animation-iteration-count: 1;
-        animation-duration: 2s;        
-        animation-timing-function: ease-in;
+//        opacity: 100;
+//        animation-name: fadeInOpa;
+//        animation-iteration-count: 1;
+//        animation-duration: 3s;        
+//        animation-timing-function: ease;
         .anim__fa{
-            width: 20em;
+            width: 17em;
+            padding: 6px;
             margin: 14px 20px;
+            padding-left: 34px;
             border-radius: 20px 20px;
             box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
             color: rgb(9, 9, 9);
         }
-        .anim1{
-            position: relative;
-            animation-name: dropdown;
-            animation-duration: 2s;
-            animation-delay: 0s;
-            animation-timing-function: linear;
-            animation-direction: alternate;
+        .fa{
+            margin-right: 20px;
+        }       
+        .circle__one{
+            position: absolute;
+            top: 32px;
+            margin-left: 10px;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            background: #9356DC;
+            color: #fff;
         }
-        .anim2{
-            position: relative;
-            animation-name: dropdown;
-            animation-duration: 1.4s;
-            animation-delay: 0s;
-            animation-timing-function: linear;
-            animation-direction: alternate;
+        .circle__two{
+            position: absolute;
+            top: 107px;
+            margin-left: 10px;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            background: #9356DC;
+            color: #fff;
         }
-        .anim3{
-            position: relative;
-            animation-name: dropdown;
-            animation-duration: 1.3s;
-            animation-delay: 0s;
-            animation-timing-function: linear;
-            animation-direction: alternate;
+        .circle__three{
+            position: absolute;
+            top: 179px;
+            margin-left: 10px;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            background: #9356DC;
+            color: #fff;
         }
-        @keyframes dropdown{
-            from{
-                margin-top: 3%;
-                height: 3%;
-            }
-            to { 
-                margin-bottom: 3%;
-                height: 2%;
-            }
+        .number{
+            position: absolute;
+            left: 7px;
+            bottom: -12px;
+            font-weight: normal;
         }
-        @keyframes fadeInOpa{
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
+//        .anim1{
+//            position: relative;
+//            animation-name: dropUp;
+//            animation-duration: 3s;
+//            animation-delay: 1s;
+//            animation-timing-function: linear;
+//            animation-direction: reverse;
+//        }
+//        .anim2{
+//            position: relative;
+//            animation-name: dropUpmid;
+//            animation-duration: 4s;
+//            animation-delay: 2s;
+//            animation-timing-function: linear;
+//            animation-direction: reverse;
+//        }
+//        .anim3{
+//            position: relative;
+//            animation-name: dropdown;
+//            animation-duration: 3s;
+//            animation-delay: 3s;
+//            animation-timing-function: linear;
+//            animation-direction: reverse;
+//        }
+//        @keyframes dropUp{
+//            from{
+//                margin-top: 10px;
+//            }
+//            to { 
+//                margin-bottom: 5px;
+//            }
+//        }
+//        @keyframes dropUpmid{
+//            from{
+//                margin-top: 10px;
+//            }
+//            to { 
+//                margin-bottom: 5px;
+//            }
+//        }
+//        @keyframes fadeInOpa{
+//            0% {
+//                opacity: 0;
+//            }
+//            100% {
+//                opacity: 1;
+//            }
+//        }
         .anim__fa:hover{
             background: #faf1fe;
         }

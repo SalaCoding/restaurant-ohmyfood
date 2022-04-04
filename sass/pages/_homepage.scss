@@ -1,11 +1,14 @@
 main{
+    font-family: 'roboto';
     //@include style($background);
-    margin-top: 14em;
+    margin-top: 16em;
     padding: 2em 0 0 2em;
     //$background: $navcolor;
     background: rgb(245, 245, 245);
     & > h1{
         margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 24px;
     }
     & > .img__container{
         width: fit-content;
