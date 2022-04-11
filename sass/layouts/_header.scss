@@ -1,3 +1,21 @@
+#preloader{
+    position: fixed;
+    left: 45%;
+    top: 40%;
+    border: 14px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 14px solid #9356DC;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+    animation-delay: 30s;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    50% { border-top: 12px solid #FF79DA;
+        border: 18px solid #f3f3f3; }
+    100% { transform: rotate(360deg); }
+  }
 header{
     //@include style($bookmenu);
     font-family: 'roboto'; 
@@ -24,10 +42,10 @@ header{
                     color: #3b3b3b;
                 }
             }
-            .book__menu{ 
+            .book__menu{
                 line-height: 4;
                 padding: 30px 0px 40px 0px;
-                //$background: $bookmenu;
+                //$backGround: $bookmenu;
                 background: rgb(247, 244, 244);
                 & > p{
                     margin: 0 14em;
@@ -75,6 +93,7 @@ header{
             border-radius: 20px 20px;
             box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
             color: rgb(9, 9, 9);
+            cursor: pointer;
         }
         .fa{
             margin-right: 20px;

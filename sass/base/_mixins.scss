@@ -1,5 +1,5 @@
-@mixin fonts($font__text){
-    $font__text: font-family;
+@mixin backGround($background) {
+    $background: $bookmenu;
 }
 @mixin imgcontainer() {
     //box-shadow: 0px 3px 2px 2px $imgcontain;

@@ -1,9 +1,9 @@
 main{
-    font-family: 'roboto';
     //@include style($background);
+    //$background: $navcolor;
+    font-family: 'roboto';
     margin-top: 8em;
     padding-bottom: 40px;
-    //$background: $navcolor;
     background: rgb(245, 245, 245);
     display: flex;
     justify-content: center;
@@ -79,20 +79,32 @@ main{
                 left: 41em;
                 margin-top: -43px;
                 color: rgb(120, 120, 120);
-                .far:hover{
-                    color: #9356DC;
-                    border-radius: 18px 18px 30px 30px;
-                    height: 11px;
-                    margin-top: 8px;
+                cursor: pointer;
+                .fa{
+                    display: none;
+                    position: inherit;
+                    top: 1px;
                 }
+                .far:hover + .fa{
+                    display: block;
+                    color: #9356DC;
+                }
+                
             }
             & .font__aw2{
                 position: absolute;
                 left: 71.5em;
                 margin-top: -43px;
                 color: rgb(120, 120, 120);
-                .far:hover{
-                    background-color: red; //#9356DC; 
+                cursor: pointer;
+                .fa{
+                    display: none;
+                    position: inherit;
+                    top: 1px;
+                }
+                .far:hover + .fa{
+                    display: block;
+                    color: #9356DC;
                 }
             }
             a img{
@@ -101,5 +113,7 @@ main{
             }
         }
     }
-
+}
+article{
+    display: none;
 }
