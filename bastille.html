@@ -14,27 +14,63 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Shrikhand&display=swap" rel="stylesheet">
     <style>
 .img__menu{
-    background-attachment: fixed;
     margin-top: -31px;
+    margin-bottom: 0;
 }
 .img__menu > img{
-    width: 95em;
-    min-height: 300px;
     background-position: center;
-    background-repeat: no-repeat; 
-    background-size: cover;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 26em;
 }
 .container__page{
    background:rgb(245, 245, 245);
    position: relative;
-   width: 358px;
-   top: -56px;
+   top: -94px;
    border-radius: 40px 40px 0 0;
-   padding: 20px;
+   padding: 1em 10em;
+   margin-bottom: 0;
    line-height: 2;
 }
+.title__page{
+    padding-left: 32em;
+}
+.awesom__1{
+    position: absolute;
+    top: 26px;
+    left: 54em;
+}
+.fa{
+    display: none;
+    position: inherit;
+    top: 8px;
+    }
+.far:hover + .fa{
+    display: block;
+    color: #9356DC;
+    }
+h1{
+    font-family: 'shrikhand';
+    font-weight: bold;
+    font-size: 24px;
+}
 h2{
-   line-height: 2;
+    font-family: 'Roboto';
+    font-size: 17px;
+    line-height: 2;
+    margin-left: 21px;
+}
+h3{
+    font-weight: bold;
+    font-size: 16px;
+}
+.plat__one{    
+    font-family: 'Roboto';
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
+    margin: 20px;
+    padding: 4px 20px;
 }
     </style>
     </head>
@@ -47,6 +83,83 @@ h2{
                 </a>                   
             </div>
         </div>
-        
+            <div class="img__menu">
+                <img src="Projet_ohmyfood_images/Projet3-ohmyfoodEN/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+            </div>
+    </header>  
+        <div class="container__page">
+                <div class="title__page">
+                    <h1>Bastille</h1>
+                    <div class="font__aw2 awesom__1">
+                        <i class="far fa-heart"></i>
+                        <i class="fa fa-heart"></i>
+                    </div>
+                </div>
+            <h2>ENTREES</h2>
+            <div class="plat__one">
+                <h3>Citrus Squid Carpaccio</h3>
+                <p>With orange zest</p>
+                <p>25</p>
+            </div>
+            <div class="plat__one">
+                <h3>Grandmother's Vegetable Soup</h3>
+                <p>Carrots, parsnips, Jersusalem artichoke</p>
+                <p>35</p>
+            </div>
+            <div class="plat__one">
+                <h3>Onion Soup</h3>
+                <p>Revisted</p>
+                <p>20</p>
+            </div>
+            <h2>MAIN DISH</h2>
+            <div class="plat__one">
+                <h3>Scallops</h3>
+                <p>With mashed parsnip</p>
+                <p>40</p>
+            </div>
+            <div class="plat__one">
+                <h3>Magret de canard</h3>
+                <p>With mashed potatoes</p>
+                <p>35</p>
+            </div>
+            <div class="plat__one">
+                <h3>Game Hen</h3>
+                <p>With vegetable gnocchis</p>
+                <p>44</p>
+            </div>
+            <h2>DESSERTS</h2>
+            <div class="plat__one">
+                <h3>Floral Ice Cream</h3>
+                <p>With hazelnut butter</p>
+                <p>18</p>
+            </div>
+            <div class="plat__one">
+                <h3>Chocolate Leva Cake</h3>
+                <p>Revisited</p>
+                <p>22</p>
+            </div>
+            <div class="plat__one">
+                <h3>Napolean</h3>
+                <p>With blueberries and marzipan</p>
+                <p>23</p>
+            </div>    
+        </div>
+        <footer>
+            <h2>ohmyfood</h2>
+            <ul>
+                <a href="#">
+                    <li><i class="fa fa-utensils"></i> Suggest a restaurant</li>
+                </a>
+                <a href="#">
+                    <li><i class='fas fa-hands-helping'></i> Become a partner</li>
+                </a>
+                <a href="#">
+                    <li>Legal</li>
+                </a>
+                <a href="#">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </footer>
 </body>
 </html>

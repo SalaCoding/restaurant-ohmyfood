@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood_project",
+  "version": "1.0.0",
+  "description": "Ohmyfood is an online restaurant.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalaCoding/restaurant-ohmyfood.git"
+  },
+  "author": "Sala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SalaCoding/restaurant-ohmyfood/issues"
+  },
+  "homepage": "https://github.com/SalaCoding/restaurant-ohmyfood#readme"
+}
