@@ -45,8 +45,7 @@ header{
             .book__menu{
                 line-height: 4;
                 padding: 30px 0px 40px 0px;
-                @include backGround();
-                //background: rgb(247, 244, 244);
+                background: rgb(247, 244, 244);
                 & > p{
                     margin: 0 14em;
                     line-height: 1.2;

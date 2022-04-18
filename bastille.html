@@ -25,15 +25,16 @@
 }
 .container__page{
    background:rgb(245, 245, 245);
-   position: relative;
+    justify-content: center;
+    align-items: center;
    top: -94px;
    border-radius: 40px 40px 0 0;
-   padding: 1em 10em;
+   padding: 1em 0em;
    margin-bottom: 0;
    line-height: 2;
 }
 .title__page{
-    padding-left: 32em;
+    text-align: center;
 }
 .awesom__1{
     position: absolute;
@@ -54,23 +55,143 @@ h1{
     font-weight: bold;
     font-size: 24px;
 }
-h2{
-    font-family: 'Roboto';
-    font-size: 17px;
-    line-height: 2;
-    margin-left: 21px;
-}
 h3{
     font-weight: bold;
     font-size: 16px;
 }
-.plat__one{    
+.menu__page{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+h2{
+    position: relative;
+    font-family: 'Roboto';
+    font-size: 17px;
+    line-height: 2;
+    margin: 0 20px 34px;
+    width: 5em;
+}
+.plat__one{
+    display: flex;
+    flex-wrap: wrap;
     font-family: 'Roboto';
     background: #fff;
     border-radius: 16px;
-    box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
+    box-shadow: 2px 1px 6px 2px rgb(211, 211, 211);
     margin: 20px;
     padding: 4px 20px;
+    width: 22em;
+    cursor: pointer;
+}
+.actionOne{
+    position: relative;
+    animation: actionUnos;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes actionUnos{
+    0%{
+        bottom: 0px;
+    }
+    100%{
+        bottom: 26px;
+        opacity: 1;
+    }
+}
+.actionTwo{
+    position: relative;
+    animation: actionSegundo;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes actionSegundo{
+    0%{
+        bottom: 0px;
+    }
+    100%{
+        bottom: 26px;
+        opacity: 1;
+    }
+}
+.actionThree{
+    position: relative;
+    animation: actionThrird;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes actionThrird{
+    0%{
+        bottom: 0px;
+    }
+    100%{
+        bottom: 26px;
+        opacity: 1;
+    }
+}
+.price{
+    position: absolute;
+    left: 20em;
+    top: 2.2em;
+    font-weight: bold;
+}
+.animated__fa{
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    height: 4.5em;
+    border-radius: 0 14px 14px 0;
+    background: rgb(83, 229, 195);
+    margin-left: 19.3em;
+    opacity: 0;
+    animation-name: slideToLeft;
+    animation-duration: 4s;
+    animation-direction: alternate;
+}
+@keyframes slideToLeft{
+    0%   {
+        width: 4em;
+    }
+  25%  {
+      width: 3em;
+    }
+  50%  {
+      width: 2em;
+    }
+  75%  {
+      width: 1em;
+    }
+  100% {
+      width: 0em;
+    }
+}
+.animated__fa .fas{
+    background: #fff;
+    color: rgb(51, 255, 0);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 17px;
+    padding: 4px;
+}
+.plat__one:hover .animated__fa{
+    opacity: 1;
+}
+.plat__one:hover .animated__fa .fas{
+    animation: rotating 300ms;
+}
+@keyframes rotating{
+    0%{
+        transform: rotate(-100deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
     </style>
     </head>
@@ -95,57 +216,86 @@ h3{
                         <i class="fa fa-heart"></i>
                     </div>
                 </div>
-            <h2>ENTREES</h2>
-            <div class="plat__one">
-                <h3>Citrus Squid Carpaccio</h3>
-                <p>With orange zest</p>
-                <p>25</p>
-            </div>
-            <div class="plat__one">
-                <h3>Grandmother's Vegetable Soup</h3>
-                <p>Carrots, parsnips, Jersusalem artichoke</p>
-                <p>35</p>
-            </div>
-            <div class="plat__one">
-                <h3>Onion Soup</h3>
-                <p>Revisted</p>
-                <p>20</p>
-            </div>
-            <h2>MAIN DISH</h2>
-            <div class="plat__one">
-                <h3>Scallops</h3>
-                <p>With mashed parsnip</p>
-                <p>40</p>
-            </div>
-            <div class="plat__one">
-                <h3>Magret de canard</h3>
-                <p>With mashed potatoes</p>
-                <p>35</p>
-            </div>
-            <div class="plat__one">
-                <h3>Game Hen</h3>
-                <p>With vegetable gnocchis</p>
-                <p>44</p>
-            </div>
-            <h2>DESSERTS</h2>
-            <div class="plat__one">
-                <h3>Floral Ice Cream</h3>
-                <p>With hazelnut butter</p>
-                <p>18</p>
-            </div>
-            <div class="plat__one">
-                <h3>Chocolate Leva Cake</h3>
-                <p>Revisited</p>
-                <p>22</p>
-            </div>
-            <div class="plat__one">
-                <h3>Napolean</h3>
-                <p>With blueberries and marzipan</p>
-                <p>23</p>
+            <div class="menu__page">
+                <h2>ENTREES</h2>
+                <div class="plat__one actionOne">
+                    <div>
+                        <h3>Citrus Squid Carpaccio</h3>
+                        <p>With orange zest</p>
+                    </div>
+                    <p class="price">€25</p>
+                    <span class="animated__fa"><i class="fas fa-check"></i></span>
+                </div>
+                <div class="plat__one actionTwo">
+                    <div>
+                        <h3>Grandmother's Vegetable Soup</h3>
+                        <p>Carrots, parsnips, Jersusalem artichoke</p>
+                    </div>
+                    <p class="price">€35</p>
+                    <span class="animated__fa"><i class="fas fa-check"></i></span>
+                </div>
+                <div class="plat__one actionThree">
+                    <div>
+                        <h3>Onion Soup</h3>
+                        <p>Revisted</p>
+                    </div>
+                    <p class="price">€20</p>
+                    <span class="animated__fa"><i class="fas fa-check"></i></span>
+                </div>
+                <h2>MAIN DISH</h2>
+                <div class="plat__one actionTwo">
+                    <div>
+                        <h3>Scallops</h3>
+                        <p>With mashed parsnip</p>
+                    </div>
+                    <p class="price">€40</p>
+                    <span class="animated__fa"><i class="fas fa-check"></i></span>
+                </div>
+                <div class="plat__one actionTwo">
+                    <div>
+                        <h3>Magret de canard</h3>
+                        <p>With mashed potatoes</p>
+                    </div>
+                    <p class="price">€35</p>
+                    <span class="animated__fa"><i class="fas fa-check"></i></span>
+                </div>
+                <div class="plat__one actionTwo">
+                    <div>
+                        <h3>Game Hen</h3>
+                        <p>With vegetable gnocchis</p>
+                    </div>
+                    <p class="price">€44</p>
+                    <span class="animated__fa"><i class="fas fa-check"></i></span>
+                </div>
+                <h2>DESSERTS</h2>
+                <div class="plat__one actionThree">
+                    <div>
+                        <h3>Floral Ice Cream</h3>
+                        <p>With hazelnut butter</p>
+                    </div>
+                    <p class="price">€18</p>
+                    <span class="animated__fa"><i class="fas fa-check"></i></span>
+                </div>
+                <div class="plat__one actionThree">
+                    <div>
+                        <h3>Chocolate Leva Cake</h3>
+                        <p>Revisited</p>
+                    </div>
+                    <p class="price">€22</p>
+                    <span class="animated__fa"><i class="fas fa-check"></i></span>
+                </div>
+                <div class="plat__one actionThree">
+                    <div>
+                        <h3>Napolean</h3>
+                        <p>With blueberries and marzipan</p>
+                    </div>
+                    <p class="price">€23</p>
+                    <span class="animated__fa"><i class="fas fa-check"></i></span>
+                </div>
             </div>    
         </div>
         <footer>
-            <h2>ohmyfood</h2>
+            <h4>ohmyfood</h4>
             <ul>
                 <a href="#">
                     <li><i class="fa fa-utensils"></i> Suggest a restaurant</li>
