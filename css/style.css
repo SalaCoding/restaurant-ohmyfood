@@ -1,18 +1,431 @@
-/* Error: Undefined mixin.
- *    ,
- * 91 |                 @include image();
- *    |                 ^^^^^^^^^^^^^^^^
- *    '
- *   sass\pages\_homepage.scss 91:17  @import
- *   sass\main.scss 8:5               root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 91 \2502                  @include image();\d\a    \2502                  ^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\pages\\_homepage.scss 91:17  @import\a   sass\\main.scss 8:5               root stylesheet";
+#preloader {
+  position: fixed;
+  left: 45%;
+  top: 40%;
+  border: 14px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 14px solid #9356DC;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+  animation-delay: 30s;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    border-top: 12px solid #FF79DA;
+    border: 18px solid #f3f3f3;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header {
+  font-family: "roboto";
+}
+header > .container {
+  text-align: center;
+  margin-bottom: 2em;
+}
+header > .container .logo {
+  box-shadow: 0 2px 3px 0 #b4b4b4;
+}
+header > .container .logo > a img {
+  width: 10em;
+  height: 2em;
+  margin: 0.8em auto 0.5em;
+  cursor: default;
+}
+header > .container a {
+  text-decoration: none;
+}
+header > .container a .location__paris {
+  padding: 10px;
+  margin-top: 0.2em;
+  font-weight: bold;
+  background: #e9e9e9;
+  color: #3b3b3b;
+}
+header > .container .book__menu {
+  line-height: 4;
+  padding: 30px 0px 40px 0px;
+  background: rgb(247, 244, 244);
+}
+header > .container .book__menu > p {
+  margin: 0 14em;
+  line-height: 1.2;
+  color: #6b6b6b;
+}
+header > .container .book__menu > button {
+  display: none;
+  margin-top: 20px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  background-image: linear-gradient(350deg, #612e9e, rgb(250, 79, 230));
+  border-radius: 44px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+header > .container .book__menu button:hover {
+  box-shadow: 0px 0px 2px 2px #fb79f5;
+}
+header h1 {
+  margin: 0 240px 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+header > nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0em 14em;
+  line-height: 3;
+  font-weight: bold;
+  position: absolute;
+}
+header > nav .anim__fa {
+  width: 17em;
+  padding: 6px;
+  margin: 14px 20px;
+  padding-left: 34px;
+  border-radius: 20px 20px;
+  box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
+  color: rgb(9, 9, 9);
+  cursor: pointer;
+}
+header > nav .fa {
+  display: none;
+  margin-right: 20px;
+}
+header > nav .circle__container {
+  display: flex;
+  position: absolute;
+  top: 30px;
+}
+header > nav .circle__container .circle__one {
+  top: 32px;
+  margin-left: 10px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #9356DC;
+  color: #fff;
+}
+header > nav .circle__container .circle__two {
+  top: 107px;
+  margin-left: 20.4em;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #9356DC;
+  color: #fff;
+}
+header > nav .circle__container .circle__three {
+  top: 179px;
+  margin-left: 20.5em;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #9356DC;
+  color: #fff;
+}
+header > nav .circle__container .number {
+  margin-left: 7px;
+  margin-top: -12px;
+  font-weight: normal;
+}
+header > nav .anim__fa:hover {
+  background: #faf1fe;
+}
+
+footer {
+  padding: 20px;
+  background: rgb(70, 70, 70);
+  color: #fff;
+}
+footer > h4 {
+  line-height: 2;
+  font-size: 24px;
+  font-family: "shrikhand";
+  text-align: center;
+}
+footer > ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer > ul a {
+  text-decoration: none;
+}
+footer > ul a li {
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+main {
+  font-family: "roboto";
+  margin-top: 8em;
+  padding-bottom: 40px;
+  background: rgb(245, 245, 245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > h1 {
+  font-weight: bold;
+  font-size: 24px;
+  position: absolute;
+  top: 23.5em;
+  left: 10em;
+}
+main > .home__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 68em;
+}
+main > .home__images > .img__container {
+  margin-top: 70px;
+  border-radius: 18px 18px 18px 18px;
+  box-shadow: 0px 1.5px 1px 1px #b4b3b3;
+}
+main > .home__images > .img__container .new__resto {
+  position: absolute;
+  left: 36em;
+  margin-top: 10px;
+  background: rgb(117, 247, 203);
+  color: rgb(1, 131, 87);
+  padding: 6px 10px;
+  width: 70px;
+  text-align: center;
+}
+main > .home__images > .img__container .new__resto2 {
+  position: absolute;
+  left: 66.5em;
+  margin-top: 10px;
+  background: rgb(117, 247, 203);
+  color: rgb(1, 131, 87);
+  padding: 6px 10px;
+  width: 70px;
+  text-align: center;
+}
+main > .home__images > .img__container div {
+  margin: 0 10px 14px;
+}
+main > .home__images > .img__container div h3 {
+  line-height: 2;
+  font-weight: bold;
+}
+main > .home__images > .img__container .font__aw {
+  position: absolute;
+  left: 41em;
+  margin-top: -43px;
+  color: rgb(120, 120, 120);
+  cursor: pointer;
+}
+main > .home__images > .img__container .font__aw .fa {
+  display: none;
+  position: inherit;
+  top: 1px;
+}
+main > .home__images > .img__container .font__aw .far:hover + .fa {
+  display: block;
+  color: #9356DC;
+}
+main > .home__images > .img__container .font__aw2 {
+  position: absolute;
+  left: 71.5em;
+  margin-top: -43px;
+  color: rgb(120, 120, 120);
+  cursor: pointer;
+}
+main > .home__images > .img__container .font__aw2 .fa {
+  display: none;
+  position: inherit;
+  top: 1px;
+}
+main > .home__images > .img__container .font__aw2 .far:hover + .fa {
+  display: block;
+  color: #9356DC;
+}
+main > .home__images > .img__container a img {
+  width: 24em;
+  height: 18em;
+  border-radius: 18px 18px 0px 0px;
+}
+
+.img__menu {
+  position: relative;
+  bottom: 31px;
+}
+.img__menu img {
+  width: 1519px;
+  height: 400px;
+}
+
+.container__page {
+  background: rgb(245, 245, 245);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: -94px;
+  border-radius: 40px 40px 0 0;
+  padding: 1em 0em;
+  line-height: 2;
+  margin-bottom: -90px;
+}
+.container__page > .title__page {
+  text-align: center;
+}
+.container__page > .title__page h1 {
+  font-family: "shrikhand";
+  font-size: 24px;
+}
+.container__page > .title__page .awesom__1 {
+  position: absolute;
+  font-weight: bold;
+  font-size: 24px;
+  display: none;
+}
+.container__page > .menu__page {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.container__page > .menu__page h2 {
+  position: relative;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 2;
+  margin-left: 21px;
+}
+.container__page > .menu__page > .plat__one {
+  font-family: "Roboto";
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
+  box-shadow: 2px 1px 6px 2px rgb(211, 211, 211);
+  margin: 40px;
+  padding: 4px 10px;
+  width: 22em;
+  height: 4em;
+  cursor: pointer;
+}
+.container__page > .menu__page > .plat__one > div {
+  padding: 10px;
+  line-height: 1.5;
+}
+.container__page > .menu__page > .plat__one h3 {
+  font-weight: bold;
+  font-size: 16px;
+}
+.container__page > .menu__page > .actionOne {
+  position: relative;
+  left: 10px;
+  animation: actionUnos;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes actionUnos {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 26px;
+    opacity: 1;
+  }
+}
+.container__page > .menu__page > .actionTwo {
+  position: relative;
+  animation: actionSegundo;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes actionSegundo {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 26px;
+    opacity: 1;
+  }
+}
+.container__page > .menu__page .actionThree {
+  position: relative;
+  animation: actionThrird;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes actionThrird {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 26px;
+    opacity: 1;
+  }
+}
+.container__page > .menu__page .price {
+  position: absolute;
+  left: 20em;
+  top: 1.8em;
+  font-weight: bold;
+}
+.container__page > .menu__page .animated__fa {
+  position: absolute;
+  top: 0px;
+  left: 308px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.5em;
+  border-radius: 0 14px 14px 0;
+  background: rgb(83, 229, 195);
+  opacity: 0;
+}
+.container__page > .menu__page .plat__one:hover .animated__fa {
+  transition-property: width;
+  animation: slideToLeft 0.3s forwards;
+  width: 4em;
+}
+@keyframes slideToLeft {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.container__page > .menu__page .animated__fa .fas {
+  background: #fff;
+  color: rgb(51, 255, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 17px;
+  padding: 4px;
+}
+.container__page > .menu__page .plat__one:hover .animated__fa {
+  opacity: 1;
+}
+.container__page > .menu__page .plat__one:hover .animated__fa .fas {
+  animation: rotating 320ms;
+}
+@keyframes rotating {
+  0% {
+    transform: rotate(-160deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

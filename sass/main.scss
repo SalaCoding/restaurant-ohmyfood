@@ -1,14 +1,17 @@
 @import
-    'layouts/_header.scss';
+    './layouts/header';
 
 @import
-    'layouts/_footer.scss';
+    './layouts/footer';
 
 @import
-    'pages/_homepage.scss';
+    './pages/homepage';
 
 @import
-    'utils/_mixins.scss';
+    './pages/menu';
 
 @import
-    'utils/_variables.scss'; 
+    './utils/mixins';
+
+@import
+    './utils/variables';

@@ -88,7 +88,9 @@ main{
                 }
             }
             a img{
-                @include image();
+                //@include images();
+                width: 24em;
+                height: 18em;
                 border-radius: 18px 18px 0px 0px;
             }
         }
