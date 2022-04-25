@@ -39,7 +39,7 @@
             font-family: 'Roboto';
             font-weight: bold;
             font-size: 17px;
-            line-height: 2;
+            line-height: 1;
             margin-left: 21px;
         }  
         & > .plat__one{
@@ -51,9 +51,8 @@
             box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
             box-shadow: 2px 1px 6px 2px rgb(211, 211, 211);
             margin: 40px;
-            padding: 4px 10px;
+            padding: 2px 10px;
             width: 22em;
-            height: 4em;
             cursor: pointer;
             & > div{
                 padding: 10px;
@@ -62,7 +61,29 @@
             h3{
                 font-weight: bold;
                 font-size: 16px;
-            } 
+            }
+            p{
+                font-size: 14px;
+            }
+            .cut-text { 
+                text-overflow: ellipsis;
+                overflow: hidden; 
+                width: 284px; 
+                height: 1.2em; 
+                white-space: nowrap;
+              }
+        }
+        &:hover > .prive { 
+                text-overflow: ellipsis;
+                overflow: hidden; 
+                width: 104px; 
+                height: 1.2em; 
+                white-space: nowrap;
+        }
+        & > .--special__case{
+            position: absolute;
+            margin-left: 8em;
+            margin-right: 60em;
         }
         & > .actionOne{
             position: relative;
@@ -80,6 +101,22 @@
                     opacity: 1;
                 }
             }
+            .cut-text { 
+                text-overflow: ellipsis;
+                overflow: hidden; 
+                width: 284px; 
+                height: 1.2em; 
+                white-space: nowrap;
+              }
+        }
+        & > .actionOne:hover{
+            .cut-text { 
+                text-overflow: ellipsis;
+                overflow: hidden; 
+                width: 210px; 
+                height: 1.2em; 
+                white-space: nowrap;
+              }
         }
         & > .actionTwo{
             position: relative;
@@ -96,8 +133,22 @@
                     opacity: 1;
                 }
             }
+            .cut-text { 
+                text-overflow: ellipsis;
+                overflow: hidden; 
+                width: 286px; 
+                height: 1.2em; 
+                white-space: nowrap;
+            }
         }
-        .actionThree{
+        & > .actionTwo:hover{
+            &:hover{
+                .cut-text--all{
+                    left: 19em;
+                }
+            }
+        }
+        & > .actionThree{
             position: relative;
             animation: actionThrird;
             animation-duration: 1.7s;
@@ -112,13 +163,46 @@
                     opacity: 1;
                 }
             }
+            .cut-text { 
+                text-overflow: ellipsis;
+                overflow: hidden; 
+                width: 286px; 
+                height: 1.2em; 
+                white-space: nowrap;
+            }
         }
+        & > .actionThree:hover{
+            &:hover{
+                .cut-text--all{
+                    left: 19em;
+                }
+            }
+        }
+        //.another__special--case{
+        //    position: relative;
+        //    border: 1px solid;
+        //    background: red;
+        //    break-after: none;
+        //}
+
     .price{
         position: absolute;
-        left: 20em;
-        top: 1.8em;
+        left: 22em;
+        top: 2.1em;
         font-weight: bold;
-    }.animated__fa{
+        padding: 2px;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        height: 1.2em; 
+        white-space: nowrap;
+    }
+    //When you over Fried egg
+    &:hover{
+        .cut-text--egg { 
+            left: 19em;
+          }
+    } 
+    .animated__fa{
         position: absolute;
         top: 0px;
         left: 308px;
@@ -130,6 +214,7 @@
         background: rgb(83, 229, 195);
         opacity: 0;
     }
+    //The animation slide from right to left
     .plat__one:hover .animated__fa{
         transition-property: width;
         animation: slideToLeft 0.3s forwards;
@@ -143,6 +228,7 @@
             clip-path: inset(0 0 0 0);
           }
     }
+    //This is for the background of the check mark
     .animated__fa .fas{
         background: #fff;
         color: rgb(51, 255, 0);
@@ -151,12 +237,15 @@
         height: 17px;
         padding: 4px;
     }
+    //This is for to appear the check mark
     .plat__one:hover .animated__fa{
         opacity: 1;
     }
+    //this is for the rotation of the check mark
     .plat__one:hover .animated__fa .fas{
         animation: rotating 320ms;
     }
+    // Here the check mark transformation
     @keyframes rotating{
         0%{
             transform: rotate(-160deg);

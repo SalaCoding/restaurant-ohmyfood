@@ -302,7 +302,7 @@ main > .home__images > .img__container a img {
   font-family: "Roboto";
   font-weight: bold;
   font-size: 17px;
-  line-height: 2;
+  line-height: 1;
   margin-left: 21px;
 }
 .container__page > .menu__page > .plat__one {
@@ -312,9 +312,8 @@ main > .home__images > .img__container a img {
   box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
   box-shadow: 2px 1px 6px 2px rgb(211, 211, 211);
   margin: 40px;
-  padding: 4px 10px;
+  padding: 2px 10px;
   width: 22em;
-  height: 4em;
   cursor: pointer;
 }
 .container__page > .menu__page > .plat__one > div {
@@ -324,6 +323,28 @@ main > .home__images > .img__container a img {
 .container__page > .menu__page > .plat__one h3 {
   font-weight: bold;
   font-size: 16px;
+}
+.container__page > .menu__page > .plat__one p {
+  font-size: 14px;
+}
+.container__page > .menu__page > .plat__one .cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 284px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+.container__page > .menu__page:hover > .prive {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 104px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+.container__page > .menu__page > .--special__case {
+  position: absolute;
+  margin-left: 8em;
+  margin-right: 60em;
 }
 .container__page > .menu__page > .actionOne {
   position: relative;
@@ -342,6 +363,20 @@ main > .home__images > .img__container a img {
     opacity: 1;
   }
 }
+.container__page > .menu__page > .actionOne .cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 284px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+.container__page > .menu__page > .actionOne:hover .cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 210px;
+  height: 1.2em;
+  white-space: nowrap;
+}
 .container__page > .menu__page > .actionTwo {
   position: relative;
   animation: actionSegundo;
@@ -358,7 +393,17 @@ main > .home__images > .img__container a img {
     opacity: 1;
   }
 }
-.container__page > .menu__page .actionThree {
+.container__page > .menu__page > .actionTwo .cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 286px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+.container__page > .menu__page > .actionTwo:hover:hover .cut-text--all {
+  left: 19em;
+}
+.container__page > .menu__page > .actionThree {
   position: relative;
   animation: actionThrird;
   animation-duration: 1.7s;
@@ -374,11 +419,29 @@ main > .home__images > .img__container a img {
     opacity: 1;
   }
 }
+.container__page > .menu__page > .actionThree .cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 286px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+.container__page > .menu__page > .actionThree:hover:hover .cut-text--all {
+  left: 19em;
+}
 .container__page > .menu__page .price {
   position: absolute;
-  left: 20em;
-  top: 1.8em;
+  left: 22em;
+  top: 2.1em;
   font-weight: bold;
+  padding: 2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 1.2em;
+  white-space: nowrap;
+}
+.container__page > .menu__page:hover .cut-text--egg {
+  left: 19em;
 }
 .container__page > .menu__page .animated__fa {
   position: absolute;
