@@ -32,7 +32,6 @@ header{
                 }
             }
             & a{
-                
                 text-decoration: none;
                 .location__paris{
                     padding: 10px;
@@ -46,6 +45,11 @@ header{
                 line-height: 4;
                 padding: 30px 0px 40px 0px;
                 background: rgb(247, 244, 244);
+                & h1{
+                    margin: 0 240px 10px;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
                 & > p{
                     margin: 0 14em;
                     line-height: 1.2;
@@ -69,22 +73,23 @@ header{
             }
     }
     & h1{
-        margin: 0 240px 10px;
+        margin: -14px 240px 10px;
         font-size: 22px;
         font-weight: bold;
     }
     & > nav{
         display: flex;
         flex-wrap: wrap;
-        margin: 0em 14em;
+        justify-content: center;
+        margin: 0 10em 0 10em;
         line-height: 3;
         font-weight: bold;
-        position: absolute;
-//        opacity: 100;
-//        animation-name: fadeInOpa;
-//        animation-iteration-count: 1;
-//        animation-duration: 3s;        
-//        animation-timing-function: ease;
+        .animation{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: -1.8em;
+        }
         .anim__fa{
             width: 17em;
             padding: 6px;
@@ -99,13 +104,22 @@ header{
             display: none;
             margin-right: 20px;
         }
-        .circle__container{
+        & > .circle__container{
             display: flex;
-            position: absolute;
-            top: 30px;
+            flex-wrap: wrap;
+            margin: 0 10em 0 10em;
+            line-height: 3;
+            font-weight: bold;
+            //    display: flex;
+        //    flex-wrap: wrap;
+        //    justify-content: space-evenly;
+        //    margin: 0 10em 0 10em;
+        //    position: absolute;
+        //    top: 30px;
             .circle__one{
-                top: 32px;
-                margin-left: 10px;
+                position: relative;
+                top: 26.5px;
+                left: -485px;
                 width: 23px;
                 height: 23px;
                 border-radius: 50%;
@@ -113,8 +127,9 @@ header{
                 color: #fff;
             }
             .circle__two{
-                top: 107px;
-                margin-left: 20.4em;
+                position: relative;
+                top: 26.5px;
+                left: -9.7em;
                 width: 23px;
                 height: 23px;
                 border-radius: 50%;
@@ -122,8 +137,9 @@ header{
                 color: #fff;
             }
             .circle__three{
-                top: 179px;
-                margin-left: 20.5em;
+                position: relative;
+                top: 26.5px;
+                left: 41.6em;
                 width: 23px;
                 height: 23px;
                 border-radius: 50%;
@@ -136,7 +152,7 @@ header{
                 font-weight: normal;
             }
         }       
-        .anim__fa:hover{
+        & > .anim__fa:hover{
             background: #faf1fe;
         }
     }

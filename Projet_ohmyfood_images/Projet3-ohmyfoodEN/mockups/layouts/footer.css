@@ -1,0 +1,14 @@
+footer {
+  padding-left: 20px;
+}
+
+footer > h2 {
+  line-height: 2;
+  font-size: 18px;
+}
+
+footer ul > li {
+  line-height: 1.5;
+  font-size: 14px;
+}
+/*# sourceMappingURL=footer.css.map */

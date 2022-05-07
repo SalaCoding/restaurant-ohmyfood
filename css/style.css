@@ -78,6 +78,7 @@ header h1 {
   margin: 0 240px 10px;
   font-size: 22px;
   font-weight: bold;
+  background: #fff;
 }
 header > nav {
   display: flex;
@@ -98,7 +99,6 @@ header > nav .anim__fa {
   cursor: pointer;
 }
 header > nav .fa {
-  display: none;
   margin-right: 20px;
 }
 header > nav .circle__container {
@@ -175,13 +175,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-main > h1 {
-  font-weight: bold;
-  font-size: 24px;
-  position: absolute;
-  top: 23.5em;
-  left: 10em;
 }
 main > .home__images {
   display: flex;
@@ -266,6 +259,12 @@ main > .home__images > .img__container a img {
 .img__menu img {
   width: 1519px;
   height: 400px;
+}
+@media only screen and (max-width: 992px) {
+  .img__menu img img {
+    width: 50px;
+    height: 200px;
+  }
 }
 
 .container__page {
@@ -488,6 +487,19 @@ main > .home__images > .img__container a img {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  img {
+    width: 100px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 992px) {
+  h1 {
+    background: orangered;
+    color: aqua;
   }
 }
 
