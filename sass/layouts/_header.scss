@@ -7,8 +7,7 @@
     border-top: 14px solid #9356DC;
     width: 100px;
     height: 100px;
-    animation: spin 1s linear infinite;
-    animation-delay: 30s;
+    animation: spin 3s linear infinite;
   }
   @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -17,11 +16,14 @@
     100% { transform: rotate(360deg); }
   }
 header{
-    //@include style($bookmenu);
-    font-family: 'roboto'; 
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+    font-family: 'roboto';
+    margin: 0;
+    padding: 0;
    & > .container{
             text-align: center;
-            margin-bottom: 2em;
             .logo{
                 box-shadow: 0 2px 3px 0 #b4b4b4;
                 & > a img {
@@ -46,17 +48,14 @@ header{
                 padding: 30px 0px 40px 0px;
                 background: rgb(247, 244, 244);
                 & h1{
-                    margin: 0 240px 10px;
                     font-size: 22px;
                     font-weight: bold;
                 }
                 & > p{
-                    margin: 0 14em;
                     line-height: 1.2;
                     color: #6b6b6b;
                 }
                 & > button{     
-                    display: none;
                     margin-top: 20px;
                     border: none;
                     width: 200px;
@@ -72,88 +71,48 @@ header{
                 }
             }
     }
-    & h1{
-        margin: -14px 240px 10px;
-        font-size: 22px;
-        font-weight: bold;
-    }
     & > nav{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0 10em 0 10em;
-        line-height: 3;
-        font-weight: bold;
-        .animation{
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-evenly;
-            margin-top: -1.8em;
-        }
-        .anim__fa{
-            width: 17em;
-            padding: 6px;
-            margin: 14px 20px;
-            padding-left: 34px;
-            border-radius: 20px 20px;
-            box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
-            color: rgb(9, 9, 9);
-            cursor: pointer;
-        }
-        .fa{
-            display: none;
-            margin-right: 20px;
-        }
-        & > .circle__container{
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 10em 0 10em;
+            justify-content: center;
             line-height: 3;
             font-weight: bold;
-            //    display: flex;
-        //    flex-wrap: wrap;
-        //    justify-content: space-evenly;
-        //    margin: 0 10em 0 10em;
-        //    position: absolute;
-        //    top: 30px;
-            .circle__one{
-                position: relative;
-                top: 26.5px;
-                left: -485px;
-                width: 23px;
-                height: 23px;
-                border-radius: 50%;
-                background: #9356DC;
-                color: #fff;
+            margin-bottom: 40px;
+            & > h1{
+                position: absolute;
+                text-align: center;
+                font-weight: bold;
+                font-size: 24px;
             }
-            .circle__two{
-                position: relative;
-                top: 26.5px;
-                left: -9.7em;
-                width: 23px;
-                height: 23px;
-                border-radius: 50%;
-                background: #9356DC;
-                color: #fff;
+            & > .nav__choice{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 70px 0 0 0;
+            padding: 0;
+            & > .anim__fa{
+                width: 17em;
+                margin: 0 1.4em 0.8em 0;
+                padding: 6px;
+                border-radius: 20px 20px;
+                box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
+                color: rgb(9, 9, 9);
+                cursor: pointer;            
+                & > .circle__one{
+                    position: relative;
+                    right: 20px;
+                    padding: 0.5em 0.8em;
+                    border-radius: 82px;
+                    background: #9356DC;
+                    color: #fff;
+                    font-size: 12px;
+                }
+                & > .fa{
+                    margin-right: 14px;
+                }   
             }
-            .circle__three{
-                position: relative;
-                top: 26.5px;
-                left: 41.6em;
-                width: 23px;
-                height: 23px;
-                border-radius: 50%;
-                background: #9356DC;
-                color: #fff;
+            .anim__fa:hover, .fa{
+                background: #faf1fe;
             }
-            .number{
-                margin-left: 7px;
-                margin-top: -12px;
-                font-weight: normal;
-            }
-        }       
-        & > .anim__fa:hover{
-            background: #faf1fe;
         }
     }
 }

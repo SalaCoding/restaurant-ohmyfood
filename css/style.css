@@ -7,8 +7,7 @@
   border-top: 14px solid #9356DC;
   width: 100px;
   height: 100px;
-  animation: spin 1s linear infinite;
-  animation-delay: 30s;
+  animation: spin 3s linear infinite;
 }
 
 @keyframes spin {
@@ -25,10 +24,11 @@
 }
 header {
   font-family: "roboto";
+  margin: 0;
+  padding: 0;
 }
 header > .container {
   text-align: center;
-  margin-bottom: 2em;
 }
 header > .container .logo {
   box-shadow: 0 2px 3px 0 #b4b4b4;
@@ -54,13 +54,15 @@ header > .container .book__menu {
   padding: 30px 0px 40px 0px;
   background: rgb(247, 244, 244);
 }
+header > .container .book__menu h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
 header > .container .book__menu > p {
-  margin: 0 14em;
   line-height: 1.2;
   color: #6b6b6b;
 }
 header > .container .book__menu > button {
-  display: none;
   margin-top: 20px;
   border: none;
   width: 200px;
@@ -74,71 +76,48 @@ header > .container .book__menu > button {
 header > .container .book__menu button:hover {
   box-shadow: 0px 0px 2px 2px #fb79f5;
 }
-header h1 {
-  margin: 0 240px 10px;
-  font-size: 22px;
-  font-weight: bold;
-  background: #fff;
-}
 header > nav {
   display: flex;
   flex-wrap: wrap;
-  margin: 0em 14em;
+  justify-content: center;
   line-height: 3;
   font-weight: bold;
-  position: absolute;
+  margin-bottom: 40px;
 }
-header > nav .anim__fa {
+header > nav > h1 {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+header > nav > .nav__choice {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 70px 0 0 0;
+  padding: 0;
+}
+header > nav > .nav__choice > .anim__fa {
   width: 17em;
+  margin: 0 1.4em 0.8em 0;
   padding: 6px;
-  margin: 14px 20px;
-  padding-left: 34px;
   border-radius: 20px 20px;
   box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
   color: rgb(9, 9, 9);
   cursor: pointer;
 }
-header > nav .fa {
-  margin-right: 20px;
-}
-header > nav .circle__container {
-  display: flex;
-  position: absolute;
-  top: 30px;
-}
-header > nav .circle__container .circle__one {
-  top: 32px;
-  margin-left: 10px;
-  width: 23px;
-  height: 23px;
-  border-radius: 50%;
+header > nav > .nav__choice > .anim__fa > .circle__one {
+  position: relative;
+  right: 20px;
+  padding: 0.5em 0.8em;
+  border-radius: 82px;
   background: #9356DC;
   color: #fff;
+  font-size: 12px;
 }
-header > nav .circle__container .circle__two {
-  top: 107px;
-  margin-left: 20.4em;
-  width: 23px;
-  height: 23px;
-  border-radius: 50%;
-  background: #9356DC;
-  color: #fff;
+header > nav > .nav__choice > .anim__fa > .fa {
+  margin-right: 14px;
 }
-header > nav .circle__container .circle__three {
-  top: 179px;
-  margin-left: 20.5em;
-  width: 23px;
-  height: 23px;
-  border-radius: 50%;
-  background: #9356DC;
-  color: #fff;
-}
-header > nav .circle__container .number {
-  margin-left: 7px;
-  margin-top: -12px;
-  font-weight: normal;
-}
-header > nav .anim__fa:hover {
+header > nav > .nav__choice .anim__fa:hover, header > nav > .nav__choice .fa {
   background: #faf1fe;
 }
 
@@ -169,7 +148,6 @@ footer > ul a li {
 
 main {
   font-family: "roboto";
-  margin-top: 8em;
   padding-bottom: 40px;
   background: rgb(245, 245, 245);
   display: flex;
@@ -182,25 +160,26 @@ main > .home__images {
   justify-content: space-evenly;
   width: 68em;
 }
+main > .home__images h1 {
+  position: absolute;
+  margin-top: 14px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
 main > .home__images > .img__container {
+  display: flex;
+  flex-direction: column;
   margin-top: 70px;
   border-radius: 18px 18px 18px 18px;
   box-shadow: 0px 1.5px 1px 1px #b4b3b3;
 }
 main > .home__images > .img__container .new__resto {
   position: absolute;
-  left: 36em;
-  margin-top: 10px;
-  background: rgb(117, 247, 203);
-  color: rgb(1, 131, 87);
-  padding: 6px 10px;
-  width: 70px;
-  text-align: center;
-}
-main > .home__images > .img__container .new__resto2 {
-  position: absolute;
-  left: 66.5em;
-  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5em 15.8em;
   background: rgb(117, 247, 203);
   color: rgb(1, 131, 87);
   padding: 6px 10px;
@@ -216,8 +195,9 @@ main > .home__images > .img__container div h3 {
 }
 main > .home__images > .img__container .font__aw {
   position: absolute;
-  left: 41em;
-  margin-top: -43px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 19.5em 20em;
   color: rgb(120, 120, 120);
   cursor: pointer;
 }
@@ -230,23 +210,7 @@ main > .home__images > .img__container .font__aw .far:hover + .fa {
   display: block;
   color: #9356DC;
 }
-main > .home__images > .img__container .font__aw2 {
-  position: absolute;
-  left: 71.5em;
-  margin-top: -43px;
-  color: rgb(120, 120, 120);
-  cursor: pointer;
-}
-main > .home__images > .img__container .font__aw2 .fa {
-  display: none;
-  position: inherit;
-  top: 1px;
-}
-main > .home__images > .img__container .font__aw2 .far:hover + .fa {
-  display: block;
-  color: #9356DC;
-}
-main > .home__images > .img__container a img {
+main > .home__images a img {
   width: 24em;
   height: 18em;
   border-radius: 18px 18px 0px 0px;
@@ -254,32 +218,28 @@ main > .home__images > .img__container a img {
 
 .img__menu {
   position: relative;
-  bottom: 31px;
+  display: flex;
 }
 .img__menu img {
   width: 1519px;
   height: 400px;
 }
-@media only screen and (max-width: 992px) {
-  .img__menu img img {
-    width: 50px;
-    height: 200px;
-  }
+
+header .container .logo a .fa {
+  position: relative;
+  left: -24em;
+  top: -1em;
+  font-size: 20px;
 }
 
 .container__page {
   background: rgb(245, 245, 245);
   position: relative;
-  justify-content: center;
-  align-items: center;
   top: -94px;
   border-radius: 40px 40px 0 0;
   padding: 1em 0em;
   line-height: 2;
   margin-bottom: -90px;
-}
-.container__page > .title__page {
-  text-align: center;
 }
 .container__page > .title__page h1 {
   font-family: "shrikhand";
@@ -296,13 +256,17 @@ main > .home__images > .img__container a img {
   flex-wrap: wrap;
   margin-top: 40px;
 }
-.container__page > .menu__page h2 {
-  position: relative;
-  font-family: "Roboto";
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 1;
-  margin-left: 21px;
+.container__page > .menu__page > .menu__title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.container__page > .menu__page > .menu__title h2 {
+  text-align: center;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
 }
 .container__page > .menu__page > .plat__one {
   font-family: "Roboto";
@@ -326,53 +290,21 @@ main > .home__images > .img__container a img {
 .container__page > .menu__page > .plat__one p {
   font-size: 14px;
 }
-.container__page > .menu__page > .plat__one .cut-text {
+.container__page > .menu__page .price {
+  position: absolute;
+  left: 22em;
+  top: 2.1em;
+  font-weight: bold;
+  padding: 2px;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 284px;
   height: 1.2em;
   white-space: nowrap;
 }
-.container__page > .menu__page:hover > .prive {
+.container__page > .menu__page:hover > .price {
   text-overflow: ellipsis;
   overflow: hidden;
   width: 104px;
-  height: 1.2em;
-  white-space: nowrap;
-}
-.container__page > .menu__page > .--special__case {
-  position: absolute;
-  margin-left: 8em;
-  margin-right: 60em;
-}
-.container__page > .menu__page > .actionOne {
-  position: relative;
-  left: 10px;
-  animation: actionUnos;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-@keyframes actionUnos {
-  0% {
-    bottom: 0px;
-  }
-  100% {
-    bottom: 26px;
-    opacity: 1;
-  }
-}
-.container__page > .menu__page > .actionOne .cut-text {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 284px;
-  height: 1.2em;
-  white-space: nowrap;
-}
-.container__page > .menu__page > .actionOne:hover .cut-text {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 210px;
   height: 1.2em;
   white-space: nowrap;
 }
@@ -418,28 +350,7 @@ main > .home__images > .img__container a img {
     opacity: 1;
   }
 }
-.container__page > .menu__page > .actionThree .cut-text {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 286px;
-  height: 1.2em;
-  white-space: nowrap;
-}
 .container__page > .menu__page > .actionThree:hover:hover .cut-text--all {
-  left: 19em;
-}
-.container__page > .menu__page .price {
-  position: absolute;
-  left: 22em;
-  top: 2.1em;
-  font-weight: bold;
-  padding: 2px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  height: 1.2em;
-  white-space: nowrap;
-}
-.container__page > .menu__page:hover .cut-text--egg {
   left: 19em;
 }
 .container__page > .menu__page .animated__fa {
@@ -490,16 +401,29 @@ main > .home__images > .img__container a img {
   }
 }
 
-@media only screen and (max-width: 992px) {
-  img {
-    width: 100px;
-    height: 400px;
-  }
-}
 @media screen and (max-width: 992px) {
-  h1 {
-    background: orangered;
-    color: aqua;
+  header {
+    justify-content: space-evenly;
+  }
+  header h1 {
+    margin: 0 20px 10px;
+  }
+  header > nav {
+    margin: 0 20px 10px;
+    padding: 0;
+    width: 60em;
+  }
+  header > nav .circle__container .circle__one {
+    left: 10px;
+  }
+  header > nav .circle__container .circle__two {
+    left: 304px;
+  }
+  header > nav .circle__container .circle__three {
+    left: 601px;
+  }
+  header > nav .anim__fa {
+    width: 15em;
   }
 }
 
