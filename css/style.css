@@ -227,8 +227,9 @@ main > .home__images a img {
   display: flex;
 }
 .img__menu img {
-  width: 1519px;
-  height: 400px;
+  width: 100%;
+  height: 20em;
+  background-size: cover;
 }
 
 header .container .logo a .fa {
@@ -283,21 +284,28 @@ header .container .logo a .fa {
   }
 }
 
-.menu__page {
+.container__page {
+  border-radius: 24px 24px 0 0;
+  position: relative;
+  margin-top: -4em;
+  padding: 1em 0;
+  background: #fff;
+}
+.container__page .menu__page {
   margin-top: 40px;
   font-family: "roboto";
 }
-.menu__page > .menu__title, .menu__page .menu__title--two {
+.container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
   text-align: center;
   font-weight: bold;
   margin-bottom: 40px;
 }
-.menu__page .align__container, .menu__page .align__container--two, .menu__page .align__container--three {
+.container__page .menu__page .align__container, .container__page .menu__page .align__container--two, .container__page .menu__page .align__container--three {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.menu__page .align__container > .plat__one, .menu__page .align__container--two > .plat__one, .menu__page .align__container--three > .plat__one {
+.container__page .menu__page .align__container > .plat__one, .container__page .menu__page .align__container--two > .plat__one, .container__page .menu__page .align__container--three > .plat__one {
   display: flex;
   background: #fff;
   border-radius: 16px;
@@ -323,19 +331,19 @@ header .container .logo a .fa {
     opacity: 1;
   }
 }
-.menu__page .align__container > .plat__one > div:hover .cut__text, .menu__page .align__container--two > .plat__one > div:hover .cut__text, .menu__page .align__container--three > .plat__one > div:hover .cut__text {
+.container__page .menu__page .align__container > .plat__one > div:hover .cut__text, .container__page .menu__page .align__container--two > .plat__one > div:hover .cut__text, .container__page .menu__page .align__container--three > .plat__one > div:hover .cut__text {
   text-overflow: ellipsis;
   overflow: hidden;
   width: 686px;
   height: 1.4em;
   white-space: nowrap;
 }
-.menu__page .align__container > .plat__one > div h3, .menu__page .align__container--two > .plat__one > div h3, .menu__page .align__container--three > .plat__one > div h3 {
+.container__page .menu__page .align__container > .plat__one > div h3, .container__page .menu__page .align__container--two > .plat__one > div h3, .container__page .menu__page .align__container--three > .plat__one > div h3 {
   font-weight: bold;
   font-size: 16px;
   padding-right: 10px;
 }
-.menu__page .align__container > .plat__one > .price, .menu__page .align__container--two > .plat__one > .price, .menu__page .align__container--three > .plat__one > .price {
+.container__page .menu__page .align__container > .plat__one > .price, .container__page .menu__page .align__container--two > .plat__one > .price, .container__page .menu__page .align__container--three > .plat__one > .price {
   position: absolute;
   display: inherit;
   justify-content: space-between;
@@ -346,20 +354,20 @@ header .container .logo a .fa {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu__page .align__container > .plat__one:hover .cut-text--all, .menu__page .align__container--two > .plat__one:hover .cut-text--all, .menu__page .align__container--three > .plat__one:hover .cut-text--all {
+.container__page .menu__page .align__container > .plat__one:hover .cut-text--all, .container__page .menu__page .align__container--two > .plat__one:hover .cut-text--all, .container__page .menu__page .align__container--three > .plat__one:hover .cut-text--all {
   margin-left: 16.2em;
 }
-.menu__page .align__container > .plat__one .cut-text, .menu__page .align__container--two > .plat__one .cut-text, .menu__page .align__container--three > .plat__one .cut-text {
+.container__page .menu__page .align__container > .plat__one .cut-text, .container__page .menu__page .align__container--two > .plat__one .cut-text, .container__page .menu__page .align__container--three > .plat__one .cut-text {
   text-overflow: ellipsis;
   overflow: hidden;
   width: 17em;
   height: 1.2em;
   white-space: nowrap;
 }
-.menu__page .align__container > .plat__one:hover .cut-text, .menu__page .align__container--two > .plat__one:hover .cut-text, .menu__page .align__container--three > .plat__one:hover .cut-text {
+.container__page .menu__page .align__container > .plat__one:hover .cut-text, .container__page .menu__page .align__container--two > .plat__one:hover .cut-text, .container__page .menu__page .align__container--three > .plat__one:hover .cut-text {
   width: 15.8em;
 }
-.menu__page .align__container > .plat__one > .animated__fa, .menu__page .align__container--two > .plat__one > .animated__fa, .menu__page .align__container--three > .plat__one > .animated__fa {
+.container__page .menu__page .align__container > .plat__one > .animated__fa, .container__page .menu__page .align__container--two > .plat__one > .animated__fa, .container__page .menu__page .align__container--three > .plat__one > .animated__fa {
   position: absolute;
   display: inherit;
   justify-content: space-between;
@@ -369,7 +377,7 @@ header .container .logo a .fa {
   background: rgb(83, 229, 195);
   opacity: 0;
 }
-.menu__page .align__container > .plat__one > .animated__fa > .fas, .menu__page .align__container--two > .plat__one > .animated__fa > .fas, .menu__page .align__container--three > .plat__one > .animated__fa > .fas {
+.container__page .menu__page .align__container > .plat__one > .animated__fa > .fas, .container__page .menu__page .align__container--two > .plat__one > .animated__fa > .fas, .container__page .menu__page .align__container--three > .plat__one > .animated__fa > .fas {
   margin: 21px 17px;
   background: #fff;
   color: rgb(51, 255, 0);
@@ -378,7 +386,7 @@ header .container .logo a .fa {
   height: 17px;
   padding: 4px;
 }
-.menu__page .align__container .plat__one:hover .animated__fa, .menu__page .align__container--two .plat__one:hover .animated__fa, .menu__page .align__container--three .plat__one:hover .animated__fa {
+.container__page .menu__page .align__container .plat__one:hover .animated__fa, .container__page .menu__page .align__container--two .plat__one:hover .animated__fa, .container__page .menu__page .align__container--three .plat__one:hover .animated__fa {
   opacity: 1;
   transition-property: width;
   animation: slideToLeft 0.3s forwards;
@@ -392,7 +400,7 @@ header .container .logo a .fa {
     clip-path: inset(0 0 0 0);
   }
 }
-.menu__page .align__container .plat__one:hover .animated__fa .fas, .menu__page .align__container--two .plat__one:hover .animated__fa .fas, .menu__page .align__container--three .plat__one:hover .animated__fa .fas {
+.container__page .menu__page .align__container .plat__one:hover .animated__fa .fas, .container__page .menu__page .align__container--two .plat__one:hover .animated__fa .fas, .container__page .menu__page .align__container--three .plat__one:hover .animated__fa .fas {
   animation: rotating 320ms;
 }
 @keyframes rotating {

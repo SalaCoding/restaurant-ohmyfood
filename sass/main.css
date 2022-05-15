@@ -325,8 +325,9 @@ main > .home__images a img {
 }
 
 .img__menu img {
-  width: 1519px;
-  height: 400px;
+  width: 100%;
+  height: 20em;
+  background-size: cover;
 }
 
 header .container .logo a .fa {
@@ -392,18 +393,26 @@ header .container .logo a .fa {
   }
 }
 
-.menu__page {
+.container__page {
+  border-radius: 24px 24px 0 0;
+  position: relative;
+  margin-top: -4em;
+  padding: 1em 0;
+  background: #fff;
+}
+
+.container__page .menu__page {
   margin-top: 40px;
   font-family: 'roboto';
 }
 
-.menu__page > .menu__title, .menu__page .menu__title--two {
+.container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
   text-align: center;
   font-weight: bold;
   margin-bottom: 40px;
 }
 
-.menu__page .align__container, .menu__page .align__container--two, .menu__page .align__container--three {
+.container__page .menu__page .align__container, .container__page .menu__page .align__container--two, .container__page .menu__page .align__container--three {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,7 +423,7 @@ header .container .logo a .fa {
           justify-content: center;
 }
 
-.menu__page .align__container > .plat__one, .menu__page .align__container--two > .plat__one, .menu__page .align__container--three > .plat__one {
+.container__page .menu__page .align__container > .plat__one, .container__page .menu__page .align__container--two > .plat__one, .container__page .menu__page .align__container--three > .plat__one {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,7 +468,7 @@ header .container .logo a .fa {
   }
 }
 
-.menu__page .align__container > .plat__one > div:hover .cut__text, .menu__page .align__container--two > .plat__one > div:hover .cut__text, .menu__page .align__container--three > .plat__one > div:hover .cut__text {
+.container__page .menu__page .align__container > .plat__one > div:hover .cut__text, .container__page .menu__page .align__container--two > .plat__one > div:hover .cut__text, .container__page .menu__page .align__container--three > .plat__one > div:hover .cut__text {
   text-overflow: ellipsis;
   overflow: hidden;
   width: 686px;
@@ -467,13 +476,13 @@ header .container .logo a .fa {
   white-space: nowrap;
 }
 
-.menu__page .align__container > .plat__one > div h3, .menu__page .align__container--two > .plat__one > div h3, .menu__page .align__container--three > .plat__one > div h3 {
+.container__page .menu__page .align__container > .plat__one > div h3, .container__page .menu__page .align__container--two > .plat__one > div h3, .container__page .menu__page .align__container--three > .plat__one > div h3 {
   font-weight: bold;
   font-size: 16px;
   padding-right: 10px;
 }
 
-.menu__page .align__container > .plat__one > .price, .menu__page .align__container--two > .plat__one > .price, .menu__page .align__container--three > .plat__one > .price {
+.container__page .menu__page .align__container > .plat__one > .price, .container__page .menu__page .align__container--two > .plat__one > .price, .container__page .menu__page .align__container--three > .plat__one > .price {
   position: absolute;
   display: inherit;
   -webkit-box-pack: justify;
@@ -487,11 +496,11 @@ header .container .logo a .fa {
   white-space: nowrap;
 }
 
-.menu__page .align__container > .plat__one:hover .cut-text--all, .menu__page .align__container--two > .plat__one:hover .cut-text--all, .menu__page .align__container--three > .plat__one:hover .cut-text--all {
+.container__page .menu__page .align__container > .plat__one:hover .cut-text--all, .container__page .menu__page .align__container--two > .plat__one:hover .cut-text--all, .container__page .menu__page .align__container--three > .plat__one:hover .cut-text--all {
   margin-left: 16.2em;
 }
 
-.menu__page .align__container > .plat__one .cut-text, .menu__page .align__container--two > .plat__one .cut-text, .menu__page .align__container--three > .plat__one .cut-text {
+.container__page .menu__page .align__container > .plat__one .cut-text, .container__page .menu__page .align__container--two > .plat__one .cut-text, .container__page .menu__page .align__container--three > .plat__one .cut-text {
   text-overflow: ellipsis;
   overflow: hidden;
   width: 17em;
@@ -499,11 +508,11 @@ header .container .logo a .fa {
   white-space: nowrap;
 }
 
-.menu__page .align__container > .plat__one:hover .cut-text, .menu__page .align__container--two > .plat__one:hover .cut-text, .menu__page .align__container--three > .plat__one:hover .cut-text {
+.container__page .menu__page .align__container > .plat__one:hover .cut-text, .container__page .menu__page .align__container--two > .plat__one:hover .cut-text, .container__page .menu__page .align__container--three > .plat__one:hover .cut-text {
   width: 15.8em;
 }
 
-.menu__page .align__container > .plat__one > .animated__fa, .menu__page .align__container--two > .plat__one > .animated__fa, .menu__page .align__container--three > .plat__one > .animated__fa {
+.container__page .menu__page .align__container > .plat__one > .animated__fa, .container__page .menu__page .align__container--two > .plat__one > .animated__fa, .container__page .menu__page .align__container--three > .plat__one > .animated__fa {
   position: absolute;
   display: inherit;
   -webkit-box-pack: justify;
@@ -516,7 +525,7 @@ header .container .logo a .fa {
   opacity: 0;
 }
 
-.menu__page .align__container > .plat__one > .animated__fa > .fas, .menu__page .align__container--two > .plat__one > .animated__fa > .fas, .menu__page .align__container--three > .plat__one > .animated__fa > .fas {
+.container__page .menu__page .align__container > .plat__one > .animated__fa > .fas, .container__page .menu__page .align__container--two > .plat__one > .animated__fa > .fas, .container__page .menu__page .align__container--three > .plat__one > .animated__fa > .fas {
   margin: 21px 17px;
   background: #fff;
   color: #33ff00;
@@ -526,7 +535,7 @@ header .container .logo a .fa {
   padding: 4px;
 }
 
-.menu__page .align__container .plat__one:hover .animated__fa, .menu__page .align__container--two .plat__one:hover .animated__fa, .menu__page .align__container--three .plat__one:hover .animated__fa {
+.container__page .menu__page .align__container .plat__one:hover .animated__fa, .container__page .menu__page .align__container--two .plat__one:hover .animated__fa, .container__page .menu__page .align__container--three .plat__one:hover .animated__fa {
   opacity: 1;
   -webkit-transition-property: width;
   transition-property: width;
@@ -557,7 +566,7 @@ header .container .logo a .fa {
   }
 }
 
-.menu__page .align__container .plat__one:hover .animated__fa .fas, .menu__page .align__container--two .plat__one:hover .animated__fa .fas, .menu__page .align__container--three .plat__one:hover .animated__fa .fas {
+.container__page .menu__page .align__container .plat__one:hover .animated__fa .fas, .container__page .menu__page .align__container--two .plat__one:hover .animated__fa .fas, .container__page .menu__page .align__container--three .plat__one:hover .animated__fa .fas {
   -webkit-animation: rotating 320ms;
           animation: rotating 320ms;
 }
