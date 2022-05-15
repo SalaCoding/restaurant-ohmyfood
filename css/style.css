@@ -8,6 +8,7 @@
   width: 100px;
   height: 100px;
   animation: spin 3s linear infinite;
+  animation-duration: 100ms;
 }
 
 @keyframes spin {
@@ -76,27 +77,31 @@ header > .container .book__menu > button {
 header > .container .book__menu button:hover {
   box-shadow: 0px 0px 2px 2px #fb79f5;
 }
-header > nav {
+
+nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   line-height: 3;
   font-weight: bold;
   margin-bottom: 40px;
+  font-family: "roboto";
 }
-header > nav > h1 {
+nav > h1 {
   position: absolute;
   text-align: center;
   font-weight: bold;
   font-size: 24px;
 }
-header > nav > .nav__choice {
+nav > .nav__choice {
   display: flex;
   flex-wrap: wrap;
+  flex-basis: 100%;
+  justify-content: center;
   margin: 70px 0 0 0;
   padding: 0;
 }
-header > nav > .nav__choice > .anim__fa {
+nav > .nav__choice > .anim__fa {
   width: 17em;
   margin: 0 1.4em 0.8em 0;
   padding: 6px;
@@ -105,7 +110,7 @@ header > nav > .nav__choice > .anim__fa {
   color: rgb(9, 9, 9);
   cursor: pointer;
 }
-header > nav > .nav__choice > .anim__fa > .circle__one {
+nav > .nav__choice > .anim__fa > .circle__one {
   position: relative;
   right: 20px;
   padding: 0.5em 0.8em;
@@ -114,10 +119,10 @@ header > nav > .nav__choice > .anim__fa > .circle__one {
   color: #fff;
   font-size: 12px;
 }
-header > nav > .nav__choice > .anim__fa > .fa {
+nav > .nav__choice > .anim__fa > .fa {
   margin-right: 14px;
 }
-header > nav > .nav__choice .anim__fa:hover, header > nav > .nav__choice .fa {
+nav > .nav__choice .anim__fa:hover, nav > .nav__choice .fa {
   background: #faf1fe;
 }
 
@@ -170,6 +175,7 @@ main > .home__images h1 {
 main > .home__images > .img__container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-top: 70px;
   border-radius: 18px 18px 18px 18px;
   box-shadow: 0px 1.5px 1px 1px #b4b3b3;
@@ -211,7 +217,7 @@ main > .home__images > .img__container .font__aw .far:hover + .fa {
   color: #9356DC;
 }
 main > .home__images a img {
-  width: 24em;
+  width: 23em;
   height: 18em;
   border-radius: 18px 18px 0px 0px;
 }
@@ -232,83 +238,76 @@ header .container .logo a .fa {
   font-size: 20px;
 }
 
-.container__page {
-  background: rgb(245, 245, 245);
-  position: relative;
-  top: -94px;
-  border-radius: 40px 40px 0 0;
-  padding: 1em 0em;
-  line-height: 2;
-  margin-bottom: -90px;
-}
-.container__page > .title__page h1 {
-  font-family: "shrikhand";
-  font-size: 24px;
-}
-.container__page > .title__page .awesom__1 {
-  position: absolute;
+.title__page {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 22px;
   font-weight: bold;
-  font-size: 24px;
-  display: none;
+  font-family: "roboto";
 }
-.container__page > .menu__page {
+.title__page > .font__aw2 {
+  display: none;
+  position: absolute;
+  flex-wrap: wrap;
+  bottom: 30px;
+  color: rgb(120, 120, 120);
+  cursor: pointer;
+  /* Extra small devices (phones, 600px and down) */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+}
+.title__page > .font__aw2 .fa {
+  display: none;
+  position: inherit;
+  top: 1px;
+}
+.title__page > .font__aw2 .far:hover + .fa {
+  display: block;
+  color: #9356DC;
+}
+@media only screen and (max-width: 600px) {
+  .title__page > .font__aw2 {
+    display: block;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .title__page > .font__aw2 {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .title__page > .font__aw2 {
+    display: none;
+  }
+}
+
+.menu__page {
+  margin-top: 40px;
+  font-family: "roboto";
+}
+.menu__page > .menu__title, .menu__page .menu__title--two {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.menu__page .align__container, .menu__page .align__container--two, .menu__page .align__container--three {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
-}
-.container__page > .menu__page > .menu__title {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.container__page > .menu__page > .menu__title h2 {
-  text-align: center;
-  border: 1px solid;
-  display: flex;
   justify-content: center;
 }
-.container__page > .menu__page > .plat__one {
-  font-family: "Roboto";
+.menu__page .align__container > .plat__one, .menu__page .align__container--two > .plat__one, .menu__page .align__container--three > .plat__one {
+  display: flex;
   background: #fff;
   border-radius: 16px;
   box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
   box-shadow: 2px 1px 6px 2px rgb(211, 211, 211);
-  margin: 40px;
-  padding: 2px 10px;
-  width: 22em;
-  cursor: pointer;
-}
-.container__page > .menu__page > .plat__one > div {
-  padding: 10px;
+  margin: 20px;
+  padding: 10px 14px;
+  width: 21em;
   line-height: 1.5;
-}
-.container__page > .menu__page > .plat__one h3 {
-  font-weight: bold;
-  font-size: 16px;
-}
-.container__page > .menu__page > .plat__one p {
-  font-size: 14px;
-}
-.container__page > .menu__page .price {
-  position: absolute;
-  left: 22em;
-  top: 2.1em;
-  font-weight: bold;
-  padding: 2px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  height: 1.2em;
-  white-space: nowrap;
-}
-.container__page > .menu__page:hover > .price {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 104px;
-  height: 1.2em;
-  white-space: nowrap;
-}
-.container__page > .menu__page > .actionTwo {
+  cursor: pointer;
   position: relative;
   animation: actionSegundo;
   animation-duration: 1.5s;
@@ -324,48 +323,63 @@ header .container .logo a .fa {
     opacity: 1;
   }
 }
-.container__page > .menu__page > .actionTwo .cut-text {
+.menu__page .align__container > .plat__one > div:hover .cut__text, .menu__page .align__container--two > .plat__one > div:hover .cut__text, .menu__page .align__container--three > .plat__one > div:hover .cut__text {
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 286px;
+  width: 686px;
+  height: 1.4em;
+  white-space: nowrap;
+}
+.menu__page .align__container > .plat__one > div h3, .menu__page .align__container--two > .plat__one > div h3, .menu__page .align__container--three > .plat__one > div h3 {
+  font-weight: bold;
+  font-size: 16px;
+  padding-right: 10px;
+}
+.menu__page .align__container > .plat__one > .price, .menu__page .align__container--two > .plat__one > .price, .menu__page .align__container--three > .plat__one > .price {
+  position: absolute;
+  display: inherit;
+  justify-content: space-between;
+  margin: 1.3em 18.6em;
+  font-weight: bold;
+  padding: 2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__page .align__container > .plat__one:hover .cut-text--all, .menu__page .align__container--two > .plat__one:hover .cut-text--all, .menu__page .align__container--three > .plat__one:hover .cut-text--all {
+  margin-left: 16.2em;
+}
+.menu__page .align__container > .plat__one .cut-text, .menu__page .align__container--two > .plat__one .cut-text, .menu__page .align__container--three > .plat__one .cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 17em;
   height: 1.2em;
   white-space: nowrap;
 }
-.container__page > .menu__page > .actionTwo:hover:hover .cut-text--all {
-  left: 19em;
+.menu__page .align__container > .plat__one:hover .cut-text, .menu__page .align__container--two > .plat__one:hover .cut-text, .menu__page .align__container--three > .plat__one:hover .cut-text {
+  width: 15.8em;
 }
-.container__page > .menu__page > .actionThree {
-  position: relative;
-  animation: actionThrird;
-  animation-duration: 1.7s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-@keyframes actionThrird {
-  0% {
-    bottom: 0px;
-  }
-  100% {
-    bottom: 26px;
-    opacity: 1;
-  }
-}
-.container__page > .menu__page > .actionThree:hover:hover .cut-text--all {
-  left: 19em;
-}
-.container__page > .menu__page .animated__fa {
+.menu__page .align__container > .plat__one > .animated__fa, .menu__page .align__container--two > .plat__one > .animated__fa, .menu__page .align__container--three > .plat__one > .animated__fa {
   position: absolute;
-  top: 0px;
-  left: 308px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4.5em;
+  display: inherit;
+  justify-content: space-between;
+  margin: -0.7em 18.5em;
+  height: 4.4em;
   border-radius: 0 14px 14px 0;
   background: rgb(83, 229, 195);
   opacity: 0;
 }
-.container__page > .menu__page .plat__one:hover .animated__fa {
+.menu__page .align__container > .plat__one > .animated__fa > .fas, .menu__page .align__container--two > .plat__one > .animated__fa > .fas, .menu__page .align__container--three > .plat__one > .animated__fa > .fas {
+  margin: 21px 17px;
+  background: #fff;
+  color: rgb(51, 255, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 17px;
+  padding: 4px;
+}
+.menu__page .align__container .plat__one:hover .animated__fa, .menu__page .align__container--two .plat__one:hover .animated__fa, .menu__page .align__container--three .plat__one:hover .animated__fa {
+  opacity: 1;
   transition-property: width;
   animation: slideToLeft 0.3s forwards;
   width: 4em;
@@ -378,18 +392,7 @@ header .container .logo a .fa {
     clip-path: inset(0 0 0 0);
   }
 }
-.container__page > .menu__page .animated__fa .fas {
-  background: #fff;
-  color: rgb(51, 255, 0);
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 50%;
-  height: 17px;
-  padding: 4px;
-}
-.container__page > .menu__page .plat__one:hover .animated__fa {
-  opacity: 1;
-}
-.container__page > .menu__page .plat__one:hover .animated__fa .fas {
+.menu__page .align__container .plat__one:hover .animated__fa .fas, .menu__page .align__container--two .plat__one:hover .animated__fa .fas, .menu__page .align__container--three .plat__one:hover .animated__fa .fas {
   animation: rotating 320ms;
 }
 @keyframes rotating {

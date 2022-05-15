@@ -20,6 +20,7 @@ main{
         & > .img__container{
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             margin-top: 70px;
             border-radius: 18px 18px 18px 18px;
             box-shadow: 0px 1.5px 1px 1px #b4b3b3;
@@ -61,7 +62,7 @@ main{
             }
         }
             a img{
-                width: 24em;
+                width: 23em;
                 height: 18em;
                 border-radius: 18px 18px 0px 0px;
             }

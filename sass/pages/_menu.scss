@@ -20,135 +20,68 @@ header{
         }
     }
 }
-.container__page{
-    background:rgb(245, 245, 245);
-    position: relative;
-//    justify-content: center;
-//    align-items: center;
-    top: -94px;
-    border-radius: 40px 40px 0 0;
-    padding: 1em 0em;
-    line-height: 2;
-    margin-bottom: -90px;
-    & > .title__page{
-    //    text-align: center;
-        h1{
-            font-family: 'shrikhand';
-            font-size: 24px;
+.title__page{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'roboto';
+    & > .font__aw2{
+        display: none;
+        position: absolute;
+        flex-wrap: wrap;
+        bottom: 30px;
+        color: rgb(120, 120, 120);
+        cursor: pointer;
+        .fa{
+            display: none;
+            position: inherit;
+            top: 1px;
         }
-        .awesom__1{
-            position: absolute;
-            font-weight: bold;
-            font-size: 24px;
+        .far:hover + .fa{
+            display: block;
+            color: #9356DC;
+        }
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            display: block;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            display: block;
+        }
+       /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
             display: none;
         }
-    }   
-    & > .menu__page{
+    }
+}
+.menu__page{
+    margin-top: 40px;
+    font-family: 'roboto';
+    & > .menu__title, .menu__title--two{
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    .align__container, .align__container--two, .align__container--three{
         display: flex;
         flex-wrap: wrap;
-        margin-top: 40px;
-        & > .menu__title{
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            h2{
-                text-align: center;
-                border: 1px solid;
-                display: flex;
-                justify-content: center;
-            }
-        }
+        justify-content: center;
         & > .plat__one{
-            //display: flex;
-            //flex-wrap: wrap;
-            font-family: 'Roboto';
+            display: flex;
             background: #fff;
             border-radius: 16px;
             box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
             box-shadow: 2px 1px 6px 2px rgb(211, 211, 211);
-            margin: 40px;
-            padding: 2px 10px;
-            width: 22em;
+            margin: 20px;
+            padding: 10px 14px;
+            width: 21em;
+            line-height: 1.5;
             cursor: pointer;
-            & > div{
-                padding: 10px;
-                line-height: 1.5;
-            }
-            h3{
-                font-weight: bold;
-                font-size: 16px;
-            }
-            p{
-                font-size: 14px;
-            }
-            //Have to check this too
-            //.cut-text { 
-                //text-overflow: ellipsis;
-                //overflow: hidden; 
-                //width: 284px; 
-                //height: 1.2em; 
-                //white-space: nowrap;
-              //}
-        }
-        .price{
-            position: absolute;
-            left: 22em;
-            top: 2.1em;
-            font-weight: bold;
-            padding: 2px;
-            text-overflow: ellipsis;
-            overflow: hidden; 
-            height: 1.2em; 
-            white-space: nowrap;
-        }
-        &:hover > .price { 
-                text-overflow: ellipsis;
-                overflow: hidden; 
-                width: 104px; 
-                height: 1.2em; 
-                white-space: nowrap;
-        }
-        ////& > .--special__case{
-        //    position: absolute;
-        //    margin-left: 8em;
-        //    margin-right: 60em;
-        //}
-
-        //& > .actionOne{
-        //    position: relative;
-        //    left: 10px;
-        //    animation: actionUnos;
-        //    animation-duration: 1s;
-        //    animation-fill-mode: forwards;
-        //    opacity: 0;
-        //    @keyframes actionUnos{
-        //        0%{
-        //            bottom: 0px;
-        ////        }
-        ////        100%{
-        ////            bottom: 26px;
-        ////            opacity: 1;
-        //        }
-        //    }
-        //    .cut-text { 
-        //        text-overflow: ellipsis;
-        //        overflow: hidden; 
-        //        width: 284px; 
-        ////        height: 1.2em; 
-        ////        white-space: nowrap;
-        ////      }
-        ////}
-        //& > .actionOne:hover{
-        //    .cut-text { 
-        //        text-overflow: ellipsis;
-        //        overflow: hidden; 
-        //        width: 210px; 
-        //        height: 1.2em; 
-        //        white-space: nowrap;
-        //      }
-        //}
-        & > .actionTwo{
+            //Part for animation
             position: relative;
             animation: actionSegundo;
             animation-duration: 1.5s;
@@ -163,80 +96,76 @@ header{
                     opacity: 1;
                 }
             }
+            & > div:hover{
+                .cut__text { 
+                    text-overflow: ellipsis;
+                    overflow: hidden; 
+                    width: 686px; 
+                    height: 1.4em; 
+                    white-space: nowrap;
+                }
+            }
+            & > div{
+                h3{
+                    font-weight: bold;
+                    font-size: 16px;
+                    padding-right: 10px;
+                }
+            }
+            & > .price{
+                position: absolute;
+                display: inherit;
+                justify-content: space-between;
+                margin: 1.3em 18.6em;
+                font-weight: bold;
+                padding: 2px;
+                text-overflow: ellipsis;
+                overflow: hidden;  
+                white-space: nowrap;
+            }
+            &:hover{
+                .cut-text--all{
+                    margin-left: 16.2em;
+                }
+            }
+            //For long text
             .cut-text { 
                 text-overflow: ellipsis;
                 overflow: hidden; 
-                width: 286px; 
+                width: 17em; 
                 height: 1.2em; 
                 white-space: nowrap;
             }
-        }
-        & > .actionTwo:hover{
+            //When you over Fried egg
             &:hover{
-                .cut-text--all{
-                    left: 19em;
+                .cut-text { 
+                    width: 15.8em;
+                }
+            } 
+            & > .animated__fa{
+                position: absolute;
+                display: inherit;
+                justify-content: space-between;
+                margin: -0.7em 18.5em;
+                height: 4.4em;
+                border-radius: 0 14px 14px 0;
+                background: rgb(83, 229, 195);
+                opacity: 0;
+            //This is for the background of the check mark
+                & > .fas{
+                    margin: 21px 17px;
+                    background: #fff;
+                    color: rgb(51, 255, 0);
+                    border: 1px solid rgb(255, 255, 255);
+                    border-radius: 50%;
+                    height: 17px;
+                    padding: 4px;
                 }
             }
         }
-        & > .actionThree{
-            position: relative;
-            animation: actionThrird;
-            animation-duration: 1.7s;
-            animation-fill-mode: forwards;
-            opacity: 0;
-            @keyframes actionThrird{
-                0%{
-                    bottom: 0px;
-                }
-                100%{
-                    bottom: 26px;
-                    opacity: 1;
-                }
-            }
-            //.cut-text { 
-            //    text-overflow: ellipsis;
-            //    overflow: hidden; 
-            //    width: 286px; 
-            //    height: 1.2em; 
-            //    white-space: nowrap;
-            //}
-        }
-        // This it is for to push price to the left
-        & > .actionThree:hover{
-            &:hover{
-                .cut-text--all{
-                    left: 19em;
-                }
-            }
-        }
-        // I have to check
-        //.another__special--case{
-        //    position: relative;
-        //    border: 1px solid;
-        //    background: red;
-        //    break-after: none;
-        //}
-        
-        //When you over Fried egg
-        //&:hover{
-        //    .cut-text--egg { 
-        //        left: 19em;
-        //    }
-        //} 
-        .animated__fa{
-            position: absolute;
-            top: 0px;
-            left: 308px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 4.5em;
-            border-radius: 0 14px 14px 0;
-            background: rgb(83, 229, 195);
-            opacity: 0;
-        }
-        //The animation slide from right to left
+         //This is for to appear the check mark
         .plat__one:hover .animated__fa{
+            opacity: 1;
             transition-property: width;
             animation: slideToLeft 0.3s forwards;
             width: 4em;
@@ -249,24 +178,11 @@ header{
                 clip-path: inset(0 0 0 0);
             }
         }
-        //This is for the background of the checkmark
-        .animated__fa .fas{
-            background: #fff;
-            color: rgb(51, 255, 0);
-            border: 1px solid rgb(255, 255, 255);
-            border-radius: 50%;
-            height: 17px;
-            padding: 4px;
-        }
-        //This is for to appear the checkmark
-        .plat__one:hover .animated__fa{
-            opacity: 1;
-        }
-        //this is for the rotation of the checkmark
+        //this is for the rotation of the check mark
         .plat__one:hover .animated__fa .fas{
             animation: rotating 320ms;
         }
-        // Here the checkmark transformation
+        // Here the check mark transformation
         @keyframes rotating{
             0%{
                 transform: rotate(-160deg);
@@ -275,238 +191,5 @@ header{
                 transform: rotate(0deg);
             }
         }
-    }
- }
-
-    //.menu__page{
-    //    display: flex;
-    //    flex-wrap: wrap;
-    //    margin-top: 480px;
-    //background: orange;
-    //border: 1px solid;
-
-    //}
-    //    h2{
-    //        position: relative;
-    //        font-family: 'Roboto';
-    //        font-weight: bold;
-    //        font-size: 17px;
-    //        line-height: 1;
-    //        margin-left: 21px;
-    //    }  
-    //    .plat__one{
-    //        border: 1px solid;
-    //        margin-right: 80px;
-    //        background: yellow;
-            //display: flex;
-            //flex-wrap: wrap;
-    //        font-family: 'Roboto';
-    //        background: #fff;
-    //        border-radius: 16px;
-    //        box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
-    //        box-shadow: 2px 1px 6px 2px rgb(211, 211, 211);
-    //        margin: 40px;
-    //        padding: 2px 10px;
-    //        width: 22em;
-    //        cursor: pointer;
-    //        & > div{
-    //            padding: 10px;
-    //            line-height: 1.5;
-    //        }
-    //        h3{
-    //            font-weight: bold;
-    //            font-size: 16px;
-    //        }
-    //        p{
-    //            font-size: 14px;
-    //        }
-    //        .cut-text { 
-    //            text-overflow: ellipsis;
-    //            overflow: hidden; 
-    //            width: 284px; 
-    //            height: 1.2em; 
-    //            white-space: nowrap;
-    //          }
-    //    }
-    //    &:hover > .price { 
-    //            text-overflow: ellipsis;
-    //            overflow: hidden; 
-    //            width: 104px; 
-    //            height: 1.2em; 
-    //            white-space: nowrap;
-    //    }
-    //    & > .--special__case{
-    //        position: absolute;
-    //        margin-left: 8em;
-    //        margin-right: 60em;
-    //    }
-    //    & > .actionOne{
-    //        position: relative;
-    //        left: 10px;
-    //        animation: actionUnos;
-    //        animation-duration: 1s;
-    //        animation-fill-mode: forwards;
-    //        opacity: 0;
-    //        @keyframes actionUnos{
-    //            0%{
-    //                bottom: 0px;
-    //            }
-    //            100%{
-    //                bottom: 26px;
-    //                opacity: 1;
-    //            }
-    //        }
-    //        .cut-text { 
-    //            text-overflow: ellipsis;
-    //            overflow: hidden; 
-    //            width: 284px; 
-    //            height: 1.2em; 
-    //            white-space: nowrap;
-    //          }
-    //    }
-    //    & > .actionOne:hover{
-    //        .cut-text { 
-    //            text-overflow: ellipsis;
-    //            overflow: hidden; 
-    //            width: 210px; 
-    //            height: 1.2em; 
-    //            white-space: nowrap;
-    //          }
-    //    }
-    //    & > .actionTwo{
-    //        position: relative;
-    //        animation: actionSegundo;
-    //        animation-duration: 1.5s;
-    //        animation-fill-mode: forwards;
-    //        opacity: 0;
-    //        @keyframes actionSegundo{
-    //            0%{
-    //                bottom: 0px;
-    //            }
-    //            100%{
-    //                bottom: 26px;
-    //                opacity: 1;
-    //            }
-    //        }
-    //        .cut-text { 
-    //            text-overflow: ellipsis;
-    //            overflow: hidden; 
-    //            width: 286px; 
-    //            height: 1.2em; 
-    //            white-space: nowrap;
-    //        }
-    //    }
-    //    & > .actionTwo:hover{
-    //        &:hover{
-    //            .cut-text--all{
-    //                left: 19em;
-    //            }
-    //        }
-    //    }
-    //    & > .actionThree{
-    //        position: relative;
-    //        animation: actionThrird;
-    //        animation-duration: 1.7s;
-    //        animation-fill-mode: forwards;
-    //        opacity: 0;
-    //        @keyframes actionThrird{
-    //            0%{
-    //                bottom: 0px;
-    //            }
-    //            100%{
-    //                bottom: 26px;
-    //                opacity: 1;
-    //            }
-    //        }
-    //        .cut-text { 
-    //            text-overflow: ellipsis;
-    //            overflow: hidden; 
-    //            width: 286px; 
-    //            height: 1.2em; 
-    //            white-space: nowrap;
-    //        }
-    //    }
-    //    & > .actionThree:hover{
-    //        &:hover{
-    //            .cut-text--all{
-    //                left: 19em;
-    //            }
-    //        }
-    //    }
-        //.another__special--case{
-        //    position: relative;
-        //    border: 1px solid;
-        //    background: red;
-        //    break-after: none;
-        //}
-
-    //    .price{
-    //        position: absolute;
-    //        left: 22em;
-    //        top: 2.1em;
-    //        font-weight: bold;
-    //        padding: 2px;
-    //        text-overflow: ellipsis;
-    //        overflow: hidden; 
-    //        height: 1.2em; 
-    //        white-space: nowrap;
-    //    }
-        //When you over Fried egg
-    //    &:hover{
-    //        .cut-text--egg { 
-    //            left: 19em;
-    //        }
-    //    } 
-    //    .animated__fa{
-    //        position: absolute;
-    //        top: 0px;
-    //        left: 308px;
-    //        display: flex;
-    //        justify-content: center;
-    //        align-items: center;
-    //        height: 4.5em;
-    //        border-radius: 0 14px 14px 0;
-    //        background: rgb(83, 229, 195);
-    //        opacity: 0;
-    //    }
-        //The animation slide from right to left
-    //    .plat__one:hover .animated__fa{
-    //        transition-property: width;
-    //        animation: slideToLeft 0.3s forwards;
-    //        width: 4em;
-    //    }
-    //    @keyframes slideToLeft{
-    //        from {
-    //            clip-path: inset(0 0 0 100%);
-    //        }
-    //        to {
-    //            clip-path: inset(0 0 0 0);
-    //        }
-    //    }
-        //This is for the background of the check mark
-    //    .animated__fa .fas{
-    //        background: #fff;
-    //        color: rgb(51, 255, 0);
-    //        border: 1px solid rgb(255, 255, 255);
-    //        border-radius: 50%;
-    //        height: 17px;
-    //        padding: 4px;
-    //    }
-        //This is for to appear the check mark
-    //    .plat__one:hover .animated__fa{
-    //        opacity: 1;
-    //    }
-        //this is for the rotation of the check mark
-    //    .plat__one:hover .animated__fa .fas{
-    //        animation: rotating 320ms;
-    //    }
-        // Here the check mark transformation
-        //@keyframes rotating{
-    //        0%{
-    //            transform: rotate(-160deg);
-    //        }
-    //        100%{
-    //            transform: rotate(0deg);
-    //        }
-    //    }
-    //}
+    }    
+}

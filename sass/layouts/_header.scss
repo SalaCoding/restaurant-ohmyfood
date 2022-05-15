@@ -8,6 +8,7 @@
     width: 100px;
     height: 100px;
     animation: spin 3s linear infinite;
+    animation-duration: 100ms;
   }
   @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -71,48 +72,51 @@ header{
                 }
             }
     }
-    & > nav{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            line-height: 3;
-            font-weight: bold;
-            margin-bottom: 40px;
-            & > h1{
-                position: absolute;
-                text-align: center;
-                font-weight: bold;
-                font-size: 24px;
-            }
-            & > .nav__choice{
-            display: flex;
-            flex-wrap: wrap;
-            margin: 70px 0 0 0;
-            padding: 0;
-            & > .anim__fa{
-                width: 17em;
-                margin: 0 1.4em 0.8em 0;
-                padding: 6px;
-                border-radius: 20px 20px;
-                box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
-                color: rgb(9, 9, 9);
-                cursor: pointer;            
-                & > .circle__one{
-                    position: relative;
-                    right: 20px;
-                    padding: 0.5em 0.8em;
-                    border-radius: 82px;
-                    background: #9356DC;
-                    color: #fff;
-                    font-size: 12px;
-                }
-                & > .fa{
-                    margin-right: 14px;
-                }   
-            }
-            .anim__fa:hover, .fa{
-                background: #faf1fe;
-            }
-        }
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 3;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-family: 'roboto';
+    & > h1{
+        position: absolute;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
     }
+    & > .nav__choice{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 70px 0 0 0;
+    padding: 0;
+    & > .anim__fa{
+        width: 17em;
+        margin: 0 1.4em 0.8em 0;
+        padding: 6px;
+        border-radius: 20px 20px;
+        box-shadow: 2px 1px 6px 2px rgb(226, 226, 226);
+        color: rgb(9, 9, 9);
+        cursor: pointer;            
+        & > .circle__one{
+            position: relative;
+            right: 20px;
+            padding: 0.5em 0.8em;
+            border-radius: 82px;
+            background: #9356DC;
+            color: #fff;
+            font-size: 12px;
+        }
+        & > .fa{
+            margin-right: 14px;
+        }   
+    }
+    .anim__fa:hover, .fa{
+        background: #faf1fe;
+    }
+}
 }
