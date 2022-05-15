@@ -56,20 +56,6 @@ header{
                     line-height: 1.2;
                     color: #6b6b6b;
                 }
-                & > button{     
-                    margin-top: 20px;
-                    border: none;
-                    width: 200px;
-                    height: 50px;
-                    background-image: linear-gradient(350deg, #612e9e, rgb(250, 79, 230));
-                    border-radius: 44px;
-                    color: #fff;
-                    font-size: 14px;
-                    cursor: pointer;
-                }
-                button:hover{
-                    box-shadow: 0px 0px 2px 2px #fb79f5;
-                }
             }
     }
 }

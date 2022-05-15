@@ -1,3 +1,22 @@
+.book__menu {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 20px 0;
+}
+.book__menu button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  background-image: linear-gradient(350deg, #612e9e, rgb(250, 79, 230));
+  border-radius: 44px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.book__menu button:hover {
+  box-shadow: 0px 0px 2px 2px #fb79f5;
+}
+
 #preloader {
   position: fixed;
   left: 45%;
@@ -62,20 +81,6 @@ header > .container .book__menu h1 {
 header > .container .book__menu > p {
   line-height: 1.2;
   color: #6b6b6b;
-}
-header > .container .book__menu > button {
-  margin-top: 20px;
-  border: none;
-  width: 200px;
-  height: 50px;
-  background-image: linear-gradient(350deg, #612e9e, rgb(250, 79, 230));
-  border-radius: 44px;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-}
-header > .container .book__menu button:hover {
-  box-shadow: 0px 0px 2px 2px #fb79f5;
 }
 
 nav {
@@ -228,7 +233,7 @@ main > .home__images a img {
 }
 .img__menu img {
   width: 100%;
-  height: 20em;
+  height: 34em;
   background-size: cover;
 }
 
@@ -249,10 +254,8 @@ header .container .logo a .fa {
   font-family: "roboto";
 }
 .title__page > .font__aw2 {
-  display: none;
-  position: absolute;
   flex-wrap: wrap;
-  bottom: 30px;
+  bottom: 53em;
   color: rgb(120, 120, 120);
   cursor: pointer;
   /* Extra small devices (phones, 600px and down) */
@@ -260,8 +263,6 @@ header .container .logo a .fa {
   /* Medium devices (landscape tablets, 768px and up) */
 }
 .title__page > .font__aw2 .fa {
-  display: none;
-  position: inherit;
   top: 1px;
 }
 .title__page > .font__aw2 .far:hover + .fa {
@@ -287,7 +288,7 @@ header .container .logo a .fa {
 .container__page {
   border-radius: 24px 24px 0 0;
   position: relative;
-  margin-top: -4em;
+  margin-top: -7em;
   padding: 1em 0;
   background: #fff;
 }
@@ -371,7 +372,7 @@ header .container .logo a .fa {
   position: absolute;
   display: inherit;
   justify-content: space-between;
-  margin: -0.7em 18.5em;
+  margin: -0.7em 18em;
   height: 4.4em;
   border-radius: 0 14px 14px 0;
   background: rgb(83, 229, 195);
