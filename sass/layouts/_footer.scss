@@ -11,6 +11,18 @@ footer{
         font-family: "shrikhand";
         text-align: center;
         //font-family: $font__logo;
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            font-size: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            font-size: 21px;
+            display: flex;
+            justify-content: flex-start;
+        }
     }
     & > ul{
         display: flex;
@@ -23,6 +35,18 @@ footer{
                 line-height: 1.5;
                 font-size: 16px;
             }
+        }
+         /* Extra small devices (phones, 600px and down) */
+         @media only screen and (max-width: 600px) {
+            flex-direction: column;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            flex-direction: column;
+        }
+       /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            
         }
     }
 }

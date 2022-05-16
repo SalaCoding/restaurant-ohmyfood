@@ -5,7 +5,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .book__menu button {
@@ -104,6 +104,17 @@ header > .container a .location__paris {
 }
 
 header > .container .book__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid;
   line-height: 4;
   padding: 30px 0px 40px 0px;
   background: #f7f4f4;
@@ -117,6 +128,7 @@ header > .container .book__menu h1 {
 header > .container .book__menu > p {
   line-height: 1.2;
   color: #6b6b6b;
+  margin: 0 0 20px 0;
 }
 
 nav {
@@ -196,6 +208,32 @@ footer > h4 {
   font-size: 24px;
   font-family: "shrikhand";
   text-align: center;
+  /* Extra small devices (phones, 600px and down) */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+}
+
+@media only screen and (max-width: 600px) {
+  footer > h4 {
+    font-size: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  footer > h4 {
+    font-size: 21px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 footer > ul {
@@ -205,6 +243,9 @@ footer > ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  /* Extra small devices (phones, 600px and down) */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
 }
 
 footer > ul a {
@@ -216,6 +257,24 @@ footer > ul a li {
   text-decoration: none;
   line-height: 1.5;
   font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer > ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  footer > ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 main {
