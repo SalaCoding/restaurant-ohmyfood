@@ -1,3 +1,29 @@
+.book__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0 20px 0;
+}
+
+.book__menu button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  background-image: linear-gradient(350deg, #612e9e, #fa4fe6);
+  border-radius: 44px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.book__menu button:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #fb79f5;
+          box-shadow: 0px 0px 2px 2px #fb79f5;
+}
+
 #preloader {
   position: fixed;
   left: 45%;
@@ -91,23 +117,6 @@ header > .container .book__menu h1 {
 header > .container .book__menu > p {
   line-height: 1.2;
   color: #6b6b6b;
-}
-
-header > .container .book__menu > button {
-  margin-top: 20px;
-  border: none;
-  width: 200px;
-  height: 50px;
-  background-image: linear-gradient(350deg, #612e9e, #fa4fe6);
-  border-radius: 44px;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-header > .container .book__menu button:hover {
-  -webkit-box-shadow: 0px 0px 2px 2px #fb79f5;
-          box-shadow: 0px 0px 2px 2px #fb79f5;
 }
 
 nav {
@@ -341,22 +350,45 @@ header .container .logo a .fa {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 40px;
-  text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 30px 0 0 0;
   font-size: 22px;
   font-weight: bold;
   font-family: 'roboto';
 }
 
+.title__page > h1 {
+  text-align: center;
+  font-size: 28px;
+  /* Extra small devices (phones, 600px and down) */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+}
+
+@media only screen and (max-width: 600px) {
+  .title__page > h1 {
+    margin-left: 5em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .title__page > h1 {
+    margin-left: 6.7em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title__page > h1 {
+    text-align: center;
+    margin-left: 0.2em;
+  }
+}
+
 .title__page > .font__aw2 {
   display: none;
-  position: absolute;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  bottom: 30px;
+  margin-right: 1.4em;
   color: #787878;
   cursor: pointer;
   /* Extra small devices (phones, 600px and down) */
@@ -396,13 +428,13 @@ header .container .logo a .fa {
 .container__page {
   border-radius: 24px 24px 0 0;
   position: relative;
-  margin-top: -4em;
+  margin-top: -7em;
   padding: 1em 0;
   background: #fff;
 }
 
 .container__page .menu__page {
-  margin-top: 40px;
+  margin: 20px 50px 0 50px;
   font-family: 'roboto';
 }
 
@@ -410,6 +442,74 @@ header .container .logo a .fa {
   text-align: center;
   font-weight: bold;
   margin-bottom: 40px;
+  /* Extra small devices (phones, 600px and down) */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Large devices (laptops/desktops, 992px and up) */
+}
+
+.container__page .menu__page > .menu__title > h2, .container__page .menu__page .menu__title--two > h2 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 3.6em;
+  }
+  .container__page .menu__page > .menu__title > p, .container__page .menu__page .menu__title--two > p {
+    position: absolute;
+    margin-top: 1.4em;
+    width: 39px;
+    border-bottom: 2px solid #99E2D0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 4.6em;
+  }
+  .container__page .menu__page > .menu__title > p, .container__page .menu__page .menu__title--two > p {
+    position: absolute;
+    margin-top: 1.4em;
+    width: 39px;
+    border-bottom: 2px solid #99E2D0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 0em;
+  }
+  .container__page .menu__page > .menu__title > p, .container__page .menu__page .menu__title--two > p {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 0em;
+  }
 }
 
 .container__page .menu__page .align__container, .container__page .menu__page .align__container--two, .container__page .menu__page .align__container--three {
@@ -485,22 +585,27 @@ header .container .logo a .fa {
 .container__page .menu__page .align__container > .plat__one > .price, .container__page .menu__page .align__container--two > .plat__one > .price, .container__page .menu__page .align__container--three > .plat__one > .price {
   position: absolute;
   display: inherit;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 1.3em 18.6em;
+  margin-top: 1.3em;
+  margin-left: 18em;
   font-weight: bold;
   padding: 2px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  /* Extra small devices (phones, 600px and down) */
+}
+
+@media only screen and (max-width: 600px) {
+  .container__page .menu__page .align__container > .plat__one > .price, .container__page .menu__page .align__container--two > .plat__one > .price, .container__page .menu__page .align__container--three > .plat__one > .price {
+    margin-left: 17em;
+  }
 }
 
 .container__page .menu__page .align__container > .plat__one:hover .cut-text--all, .container__page .menu__page .align__container--two > .plat__one:hover .cut-text--all, .container__page .menu__page .align__container--three > .plat__one:hover .cut-text--all {
-  margin-left: 16.2em;
+  margin-left: 15.5em;
 }
 
-.container__page .menu__page .align__container > .plat__one .cut-text, .container__page .menu__page .align__container--two > .plat__one .cut-text, .container__page .menu__page .align__container--three > .plat__one .cut-text {
+.container__page .menu__page .align__container > .plat__one .cut-text, .container__page .menu__page .align__container > .plat__one .cut-text--roast, .container__page .menu__page .align__container--two > .plat__one .cut-text, .container__page .menu__page .align__container--two > .plat__one .cut-text--roast, .container__page .menu__page .align__container--three > .plat__one .cut-text, .container__page .menu__page .align__container--three > .plat__one .cut-text--roast {
   text-overflow: ellipsis;
   overflow: hidden;
   width: 17em;
@@ -509,7 +614,11 @@ header .container .logo a .fa {
 }
 
 .container__page .menu__page .align__container > .plat__one:hover .cut-text, .container__page .menu__page .align__container--two > .plat__one:hover .cut-text, .container__page .menu__page .align__container--three > .plat__one:hover .cut-text {
-  width: 15.8em;
+  width: 15em;
+}
+
+.container__page .menu__page .align__container > .plat__one:hover .cut-text--roast, .container__page .menu__page .align__container--two > .plat__one:hover .cut-text--roast, .container__page .menu__page .align__container--three > .plat__one:hover .cut-text--roast {
+  width: 14em;
 }
 
 .container__page .menu__page .align__container > .plat__one > .animated__fa, .container__page .menu__page .align__container--two > .plat__one > .animated__fa, .container__page .menu__page .align__container--three > .plat__one > .animated__fa {
@@ -518,8 +627,8 @@ header .container .logo a .fa {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: -0.7em 18.5em;
-  height: 4.4em;
+  margin: -0.7em 18em;
+  height: 4.3em;
   border-radius: 0 14px 14px 0;
   background: #53e5c3;
   opacity: 0;
