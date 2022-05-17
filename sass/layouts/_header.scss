@@ -17,9 +17,6 @@
     100% { transform: rotate(360deg); }
   }
 header{
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: center;
     font-family: 'roboto';
     margin: 0;
     padding: 0;
@@ -48,7 +45,6 @@ header{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                border: 1px solid;
                 line-height: 4;
                 padding: 30px 0px 40px 0px;
                 background: rgb(247, 244, 244);

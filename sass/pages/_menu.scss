@@ -24,53 +24,49 @@ header{
 }
 .title__page{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 30px 0 0 0;
     font-size: 22px;
     font-weight: bold;
     font-family: 'roboto';
+        @media only screen and (max-width: 600px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     & > h1{
         text-align: center;       
-        font-size: 28px;
+        font-size: 24px;
         /* Extra small devices (phones, 600px and down) */
         @media only screen and (max-width: 600px) {
-            margin-left: 5em;
+            font-size: 22px;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media only screen and (min-width: 600px) {
-            margin-left: 6.7em;
+            font-size: 22px;
         }
           /* Medium devices (landscape tablets, 768px and up) */
          @media only screen and (min-width: 768px) {
             text-align: center;
-            margin-left: 0.2em;
+            font-size: 23px;
         }
     }
+    //This is for the hearts big title
     & > .font__aw2{
-        display: none;
-        margin-right: 1.4em;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 12.4em;
         color: rgb(120, 120, 120);
         cursor: pointer;
         .fa{
             display: none;
             position: inherit;
-            top: 1px;
+            bottom: 1px;
         }
         .far:hover + .fa{
             display: block;
             color: #9356DC;
-        }
-        /* Extra small devices (phones, 600px and down) */
-        @media only screen and (max-width: 600px) {
-            display: block;
-        }
-        /* Small devices (portrait tablets and large phones, 600px and up) */
-        @media only screen and (min-width: 600px) {
-            display: block;
-        }
-       /* Medium devices (landscape tablets, 768px and up) */
-        @media only screen and (min-width: 768px) {
-            display: none;
         }
     }
 }
@@ -81,20 +77,32 @@ header{
     padding: 1em 0;
     background: #fff;
     .menu__page{
-        margin: 20px 50px 0 50px;
+        border: 1px solid;
+        margin: 20px 90px 0 90px;
+        padding: 0 0 0 0;
         font-family: 'roboto';
+        border: 1px solid;
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            margin: 20px 1px 0 1px;
+            & > p{
+                position: absolute;
+                margin-top: 1.4em;
+                width: 39px;
+                border-bottom: 2px solid #99E2D0;
+            } 
+        }
         & > .menu__title, .menu__title--two{
-            text-align: center;
             font-weight: bold;
-            margin-bottom: 40px;         
+            margin-bottom: 40px;
+            border: 1px solid;
             & > h2{
-                  text-align: center; 
+                text-align: center; 
             }
             /* Extra small devices (phones, 600px and down) */
             @media only screen and (max-width: 600px) {
-                display: flex;
-                justify-content: flex-start;
-                margin-left: 3.6em;
+                display: flex;            
+                padding-left: 4em;
                 & > p{
                     position: absolute;
                     margin-top: 1.4em;
@@ -105,7 +113,7 @@ header{
              /* Small devices (portrait tablets and large phones, 600px and up) */
              @media only screen and (min-width: 600px) {
                 display: flex;
-                margin-left: 4.6em;
+                margin-left: 7.2em;
                 & > p{
                     position: absolute;
                     margin-top: 1.4em;
@@ -159,6 +167,14 @@ header{
                         opacity: 1;
                     }
                 }
+                & > div{
+                    h3{
+                        font-weight: bold;
+                        font-size: 16px;
+                        padding-right: 10px;
+                    }
+                }
+                
                 & > div:hover{
                     .cut__text { 
                         text-overflow: ellipsis;
@@ -166,13 +182,6 @@ header{
                         width: 686px; 
                         height: 1.4em; 
                         white-space: nowrap;
-                    }
-                }
-                & > div{
-                    h3{
-                        font-weight: bold;
-                        font-size: 16px;
-                        padding-right: 10px;
                     }
                 }
                 & > .price{
@@ -224,7 +233,7 @@ header{
                     border-radius: 0 14px 14px 0;
                     background: rgb(83, 229, 195);
                     opacity: 0;
-                //This is for the background of the check mark
+                    //This is for the background of the check mark
                     & > .fas{
                         margin: 21px 17px;
                         background: #fff;
@@ -234,6 +243,18 @@ header{
                         height: 17px;
                         padding: 4px;
                     }
+                    /* Extra small devices (phones, 600px and down) */
+                    @media only screen and (max-width: 600px) {
+                        margin: -0.7em 17.2em;
+                    }
+                }
+                 /* Extra small devices (phones, 600px and down) */
+                @media only screen and (max-width: 600px) {
+                    margin: 10px;
+                }
+                /* Small devices (portrait tablets and large phones, 600px and up) */
+                @media only screen and (min-width: 600px) {
+                    margin: 10px;
                 }
             }
              //This is for to appear the check mark
