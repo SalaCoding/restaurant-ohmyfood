@@ -518,11 +518,9 @@ header .container .logo a .fa {
 }
 
 .container__page .menu__page {
-  border: 1px solid;
   margin: 20px 90px 0 90px;
   padding: 0 0 0 0;
   font-family: 'roboto';
-  border: 1px solid;
   /* Extra small devices (phones, 600px and down) */
 }
 
@@ -541,7 +539,6 @@ header .container .logo a .fa {
 .container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
   font-weight: bold;
   margin-bottom: 40px;
-  border: 1px solid;
   /* Extra small devices (phones, 600px and down) */
   /* Small devices (portrait tablets and large phones, 600px and up) */
   /* Medium devices (landscape tablets, 768px and up) */
