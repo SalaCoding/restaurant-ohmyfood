@@ -1,5 +1,6 @@
 #preloader{
     position: fixed;
+    display: block;
     left: 45%;
     top: 40%;
     border: 14px solid #f3f3f3;
@@ -7,14 +8,15 @@
     border-top: 14px solid #9356DC;
     width: 100px;
     height: 100px;
-    animation: spin 3s linear infinite;
-    animation-duration: 100ms;
+    animation: spin 1s linear infinite;
+//    animation-duration: 100ms;
   }
   @keyframes spin {
     0% { transform: rotate(0deg); }
     50% { border-top: 12px solid #FF79DA;
         border: 18px solid #f3f3f3; }
-    100% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg);
+        display: none; }
   }
 header{
     font-family: 'roboto';

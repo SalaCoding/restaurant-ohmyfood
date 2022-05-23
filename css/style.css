@@ -19,6 +19,7 @@
 
 #preloader {
   position: fixed;
+  display: block;
   left: 45%;
   top: 40%;
   border: 14px solid #f3f3f3;
@@ -26,8 +27,7 @@
   border-top: 14px solid #9356DC;
   width: 100px;
   height: 100px;
-  animation: spin 3s linear infinite;
-  animation-duration: 100ms;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -40,6 +40,7 @@
   }
   100% {
     transform: rotate(360deg);
+    display: none;
   }
 }
 header {
@@ -173,33 +174,27 @@ footer > h4 {
 footer > ul {
   display: flex;
   justify-content: space-evenly;
+  text-decoration: none;
   /* Extra small devices (phones, 600px and down) */
   /* Small devices (portrait tablets and large phones, 600px and up) */
   /* Medium devices (landscape tablets, 768px and up) */
 }
-footer > ul a {
-  text-decoration: none;
-}
-footer > ul a li {
+footer > ul li {
   color: #fff;
   text-decoration: none;
   line-height: 1.5;
   font-size: 16px;
+  /* Medium devices (landscape tablets, 768px and up) */
 }
-@media only screen and (max-width: 600px) {
-  footer > ul {
-    flex-direction: column;
-  }
-}
-@media only screen and (min-width: 600px) {
-  footer > ul {
-    flex-direction: column;
+@media only screen and (min-width: 768px) {
+  footer > ul li {
+    display: flex;
   }
 }
 @media only screen and (min-width: 768px) {
   footer > ul {
     display: flex;
-    flex-direction: unset;
+    flex-wrap: wrap;
     justify-content: space-evenly;
   }
 }
@@ -287,9 +282,37 @@ main > .home__images a img {
 
 header .container .logo a .fa {
   position: relative;
-  left: -24em;
+  left: -23em;
   top: -1em;
   font-size: 20px;
+  /* Extra small devices (phones, 600px and down) */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Large devices (laptops/desktops, 992px and up) */
+}
+@media only screen and (max-width: 600px) {
+  header .container .logo a .fa {
+    left: -5.8em;
+    top: -1em;
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  header .container .logo a .fa {
+    left: -8.8em;
+    top: -1em;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header .container .logo a .fa {
+    left: -12em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  header .container .logo a .fa {
+    left: -22em;
+  }
 }
 
 .title__page {
@@ -356,7 +379,7 @@ header .container .logo a .fa {
   background: #fff;
 }
 .container__page .menu__page {
-  margin: 20px 90px 0 90px;
+  margin: 1em 2em;
   padding: 0 0 0 0;
   font-family: "roboto";
   /* Extra small devices (phones, 600px and down) */
@@ -373,6 +396,9 @@ header .container .logo a .fa {
   }
 }
 .container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
+  position: relative;
+  display: flex;
+  justify-content: center;
   font-weight: bold;
   margin-bottom: 40px;
   /* Extra small devices (phones, 600px and down) */
@@ -386,6 +412,7 @@ header .container .logo a .fa {
 @media only screen and (max-width: 600px) {
   .container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
     display: flex;
+    justify-content: flex-start;
     padding-left: 4em;
   }
   .container__page .menu__page > .menu__title > p, .container__page .menu__page .menu__title--two > p {
@@ -398,7 +425,8 @@ header .container .logo a .fa {
 @media only screen and (min-width: 600px) {
   .container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
     display: flex;
-    margin-left: 7.2em;
+    justify-content: flex-start;
+    padding-left: 7em;
   }
   .container__page .menu__page > .menu__title > p, .container__page .menu__page .menu__title--two > p {
     position: absolute;
@@ -411,7 +439,7 @@ header .container .logo a .fa {
   .container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
     display: flex;
     justify-content: center;
-    margin-left: 0em;
+    padding: 0;
   }
   .container__page .menu__page > .menu__title > p, .container__page .menu__page .menu__title--two > p {
     display: none;
@@ -421,7 +449,6 @@ header .container .logo a .fa {
   .container__page .menu__page > .menu__title, .container__page .menu__page .menu__title--two {
     display: flex;
     justify-content: center;
-    margin-left: 0em;
   }
 }
 .container__page .menu__page .align__container, .container__page .menu__page .align__container--two, .container__page .menu__page .align__container--three {
@@ -457,6 +484,9 @@ header .container .logo a .fa {
     opacity: 1;
   }
 }
+.container__page .menu__page .align__container > .plat__one > div, .container__page .menu__page .align__container--two > .plat__one > div, .container__page .menu__page .align__container--three > .plat__one > div {
+  height: 3em;
+}
 .container__page .menu__page .align__container > .plat__one > div h3, .container__page .menu__page .align__container--two > .plat__one > div h3, .container__page .menu__page .align__container--three > .plat__one > div h3 {
   font-weight: bold;
   font-size: 16px;
@@ -466,7 +496,6 @@ header .container .logo a .fa {
   text-overflow: ellipsis;
   overflow: hidden;
   width: 686px;
-  height: 1.4em;
   white-space: nowrap;
 }
 .container__page .menu__page .align__container > .plat__one > .price, .container__page .menu__page .align__container--two > .plat__one > .price, .container__page .menu__page .align__container--three > .plat__one > .price {
@@ -524,7 +553,7 @@ header .container .logo a .fa {
 }
 @media only screen and (max-width: 600px) {
   .container__page .menu__page .align__container > .plat__one > .animated__fa, .container__page .menu__page .align__container--two > .plat__one > .animated__fa, .container__page .menu__page .align__container--three > .plat__one > .animated__fa {
-    margin: -0.7em 17.2em;
+    margin: -0.7em 18.2em;
   }
 }
 @media only screen and (max-width: 600px) {
