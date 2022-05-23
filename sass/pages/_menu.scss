@@ -19,13 +19,13 @@ header{
                     font-size: 20px;
                     /* Extra small devices (phones, 600px and down) */
                     @media only screen and (max-width: 600px) {
-                        left: -5.8em;
+                        left: -4.4em;
                         top: -1em;
                         font-size: 18px;
                     }
                     /* Small devices (portrait tablets and large phones, 600px and up) */
                     @media only screen and (min-width: 600px) {
-                        left: -8.8em;
+                        left: -7.8em;
                         top: -1em;
                         font-size: 20px;
                     }
@@ -78,15 +78,16 @@ header{
         flex-wrap: wrap;
         margin-left: 12.4em;
         color: rgb(120, 120, 120);
-        cursor: pointer;
         .fa{
             display: none;
             position: inherit;
             bottom: 1px;
+            cursor: pointer;
         }
         .far:hover + .fa{
             display: block;
             color: #9356DC;
+            cursor: pointer;
         }
     }
 }
@@ -200,11 +201,13 @@ header{
                 }
                 
                 & > div:hover{
+                    cursor: pointer;
                     .cut__text { 
                         text-overflow: ellipsis;
                         overflow: hidden; 
                         width: 686px; 
                         white-space: nowrap;
+                        cursor: pointer;
                     }
                 }
                 & > .price{
@@ -223,8 +226,10 @@ header{
                     }
                 }
                 &:hover{
+                    cursor: pointer;
                     .cut-text--all{
                         margin-left: 15.5em;
+                        cursor: pointer;
                     }
                 }
                 //For long text
@@ -239,12 +244,14 @@ header{
                 &:hover{
                     .cut-text { 
                         width: 15em;
+                        cursor: pointer;
                     }
                 }
                 //On gourmand page for to cut long text Roast...
                 &:hover{
                     .cut-text--roast{
                         width: 14em;
+                        cursor: pointer;
                     }
                 }
                 & > .animated__fa{
@@ -265,6 +272,7 @@ header{
                         border-radius: 50%;
                         height: 17px;
                         padding: 4px;
+                        cursor: pointer;
                     }
                     /* Extra small devices (phones, 600px and down) */
                     @media only screen and (max-width: 600px) {
@@ -286,6 +294,7 @@ header{
                 transition-property: width;
                 animation: slideToLeft 0.3s forwards;
                 width: 4em;
+                cursor: pointer;
             }
             @keyframes slideToLeft{
                 from {

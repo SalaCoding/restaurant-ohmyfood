@@ -57,7 +57,8 @@ main{
                 }
                 .far:hover + .fa{
                     display: block;
-                    color: #9356DC;
+                    color: #9356DC;                    
+                    cursor: pointer;
                 }
             }
         }

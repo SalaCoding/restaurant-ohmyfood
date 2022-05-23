@@ -6,6 +6,9 @@ footer{
     //    position: absolute;
         font-family: 'shrikhand';
         text-align: center;
+        @media screen and (max-width: 600px) {
+            text-align: left;
+        }
         @media screen and (min-width: 600px) {
             text-align: left;
         }
@@ -18,6 +21,11 @@ footer{
         flex-basis: 100%;        
         justify-content: space-evenly;
         margin-top: 1em;
+        @media screen and (max-width: 600px) {
+            display: inherit;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
         @media screen and (min-width: 600px) {
             display: inherit;
             flex-direction: column;

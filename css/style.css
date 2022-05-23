@@ -145,6 +145,11 @@ footer > h4 {
   font-family: "shrikhand";
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  footer > h4 {
+    text-align: left;
+  }
+}
 @media screen and (min-width: 600px) {
   footer > h4 {
     text-align: left;
@@ -160,6 +165,13 @@ footer > ul {
   flex-basis: 100%;
   justify-content: space-evenly;
   margin-top: 1em;
+}
+@media screen and (max-width: 600px) {
+  footer > ul {
+    display: inherit;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 @media screen and (min-width: 600px) {
   footer > ul {
@@ -251,6 +263,7 @@ main > .home__images > .img__container .font__aw .fa {
 main > .home__images > .img__container .font__aw .far:hover + .fa {
   display: block;
   color: #9356DC;
+  cursor: pointer;
 }
 main > .home__images a img {
   width: 23em;
@@ -280,14 +293,14 @@ header .container .logo a .fa {
 }
 @media only screen and (max-width: 600px) {
   header .container .logo a .fa {
-    left: -5.8em;
+    left: -4.4em;
     top: -1em;
     font-size: 18px;
   }
 }
 @media only screen and (min-width: 600px) {
   header .container .logo a .fa {
-    left: -8.8em;
+    left: -7.8em;
     top: -1em;
     font-size: 20px;
   }
@@ -347,16 +360,17 @@ header .container .logo a .fa {
   flex-wrap: wrap;
   margin-left: 12.4em;
   color: rgb(120, 120, 120);
-  cursor: pointer;
 }
 .title__page > .font__aw2 .fa {
   display: none;
   position: inherit;
   bottom: 1px;
+  cursor: pointer;
 }
 .title__page > .font__aw2 .far:hover + .fa {
   display: block;
   color: #9356DC;
+  cursor: pointer;
 }
 
 .container__page {
@@ -480,11 +494,15 @@ header .container .logo a .fa {
   font-size: 16px;
   padding-right: 10px;
 }
+.container__page .menu__page .align__container > .plat__one > div:hover, .container__page .menu__page .align__container--two > .plat__one > div:hover, .container__page .menu__page .align__container--three > .plat__one > div:hover {
+  cursor: pointer;
+}
 .container__page .menu__page .align__container > .plat__one > div:hover .cut__text, .container__page .menu__page .align__container--two > .plat__one > div:hover .cut__text, .container__page .menu__page .align__container--three > .plat__one > div:hover .cut__text {
   text-overflow: ellipsis;
   overflow: hidden;
   width: 686px;
   white-space: nowrap;
+  cursor: pointer;
 }
 .container__page .menu__page .align__container > .plat__one > .price, .container__page .menu__page .align__container--two > .plat__one > .price, .container__page .menu__page .align__container--three > .plat__one > .price {
   position: absolute;
@@ -503,8 +521,12 @@ header .container .logo a .fa {
     margin-left: 17em;
   }
 }
+.container__page .menu__page .align__container > .plat__one:hover, .container__page .menu__page .align__container--two > .plat__one:hover, .container__page .menu__page .align__container--three > .plat__one:hover {
+  cursor: pointer;
+}
 .container__page .menu__page .align__container > .plat__one:hover .cut-text--all, .container__page .menu__page .align__container--two > .plat__one:hover .cut-text--all, .container__page .menu__page .align__container--three > .plat__one:hover .cut-text--all {
   margin-left: 15.5em;
+  cursor: pointer;
 }
 .container__page .menu__page .align__container > .plat__one .cut-text, .container__page .menu__page .align__container > .plat__one .cut-text--roast, .container__page .menu__page .align__container--two > .plat__one .cut-text, .container__page .menu__page .align__container--two > .plat__one .cut-text--roast, .container__page .menu__page .align__container--three > .plat__one .cut-text, .container__page .menu__page .align__container--three > .plat__one .cut-text--roast {
   text-overflow: ellipsis;
@@ -515,9 +537,11 @@ header .container .logo a .fa {
 }
 .container__page .menu__page .align__container > .plat__one:hover .cut-text, .container__page .menu__page .align__container--two > .plat__one:hover .cut-text, .container__page .menu__page .align__container--three > .plat__one:hover .cut-text {
   width: 15em;
+  cursor: pointer;
 }
 .container__page .menu__page .align__container > .plat__one:hover .cut-text--roast, .container__page .menu__page .align__container--two > .plat__one:hover .cut-text--roast, .container__page .menu__page .align__container--three > .plat__one:hover .cut-text--roast {
   width: 14em;
+  cursor: pointer;
 }
 .container__page .menu__page .align__container > .plat__one > .animated__fa, .container__page .menu__page .align__container--two > .plat__one > .animated__fa, .container__page .menu__page .align__container--three > .plat__one > .animated__fa {
   position: absolute;
@@ -538,6 +562,7 @@ header .container .logo a .fa {
   border-radius: 50%;
   height: 17px;
   padding: 4px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 600px) {
   .container__page .menu__page .align__container > .plat__one > .animated__fa, .container__page .menu__page .align__container--two > .plat__one > .animated__fa, .container__page .menu__page .align__container--three > .plat__one > .animated__fa {
@@ -559,6 +584,7 @@ header .container .logo a .fa {
   transition-property: width;
   animation: slideToLeft 0.3s forwards;
   width: 4em;
+  cursor: pointer;
 }
 @keyframes slideToLeft {
   from {
