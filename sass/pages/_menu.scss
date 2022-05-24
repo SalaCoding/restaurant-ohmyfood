@@ -6,13 +6,23 @@
     width: 100%;
     height: 34em;
     background-size: cover;
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        height: 21em;
+        background-size: cover;
+    }
+    @media only screen and (min-width: 600px) {
+        width: 100%;
+        height: 22em;
+        background-size: cover;
+    }
    }
 }
 header{
-    .container{
-        .logo{
-            a{
-                .fa{
+    & >.container{
+        & > .logo{
+            & > a{
+                & > .fa{
                     position: relative;
                     left: -23em;
                     top: -1em;
@@ -78,13 +88,13 @@ header{
         flex-wrap: wrap;
         margin-left: 12.4em;
         color: rgb(120, 120, 120);
-        .fa{
+        & > .fa{
             display: none;
             position: inherit;
             bottom: 1px;
             cursor: pointer;
         }
-        .far:hover + .fa{
+        & > .far:hover + .fa{
             display: block;
             color: #9356DC;
             cursor: pointer;
@@ -97,7 +107,7 @@ header{
     margin-top: -7em;
     padding: 1em 0;
     background: #fff;
-    .menu__page{
+    & > .menu__page{
         margin: 1em 2em;
         padding: 0 0 0 0;
         font-family: 'roboto';
@@ -124,7 +134,7 @@ header{
             @media only screen and (max-width: 600px) {
                 display: flex;
                 justify-content: flex-start;
-                padding-left: 4em;
+                padding-left: 2.2em;
                 & > p{
                     position: absolute;
                     margin-top: 1.4em;
@@ -136,7 +146,7 @@ header{
              @media only screen and (min-width: 600px) {
                 display: flex;                
                 justify-content: flex-start;                                     
-                padding-left: 7em;
+                padding-left: 3em;
                 & > p{
                     position: absolute;
                     margin-top: 1.4em;
@@ -193,21 +203,10 @@ header{
                 }
                 & > div{
                     height: 3em; 
-                    h3{
+                    & > h3{
                         font-weight: bold;
                         font-size: 16px;
                         padding-right: 10px;
-                    }
-                }
-                
-                & > div:hover{
-                    cursor: pointer;
-                    .cut__text { 
-                        text-overflow: ellipsis;
-                        overflow: hidden; 
-                        width: 686px; 
-                        white-space: nowrap;
-                        cursor: pointer;
                     }
                 }
                 & > .price{
@@ -227,8 +226,17 @@ header{
                 }
                 &:hover{
                     cursor: pointer;
-                    .cut-text--all{
+                    & > .cut-text--all{
                         margin-left: 15.5em;
+                        cursor: pointer;
+                    }
+                }
+                &:hover{
+                    .cut-text { 
+                        text-overflow: ellipsis;
+                        overflow: hidden; 
+                        width: 686px; 
+                        white-space: nowrap;
                         cursor: pointer;
                     }
                 }
@@ -289,12 +297,25 @@ header{
                 }
             }
              //This is for to appear the check mark
-            .plat__one:hover .animated__fa{
+            & > .plat__one:hover .animated__fa{
                 opacity: 1;
                 transition-property: width;
                 animation: slideToLeft 0.3s forwards;
                 width: 4em;
                 cursor: pointer;
+                //this is for the rotation of the check mark
+                & > .fas{
+                    animation: rotating 320ms;
+                    // Here the check mark transformation
+                    @keyframes rotating{
+                        0%{
+                            transform: rotate(-160deg);
+                        }
+                        100%{
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
             }
             @keyframes slideToLeft{
                 from {
@@ -304,19 +325,7 @@ header{
                     clip-path: inset(0 0 0 0);
                 }
             }
-            //this is for the rotation of the check mark
-            .plat__one:hover .animated__fa .fas{
-                animation: rotating 320ms;
-            }
-            // Here the check mark transformation
-            @keyframes rotating{
-                0%{
-                    transform: rotate(-160deg);
-                }
-                100%{
-                    transform: rotate(0deg);
-                }
-            }
+            
         }    
     }
 }
